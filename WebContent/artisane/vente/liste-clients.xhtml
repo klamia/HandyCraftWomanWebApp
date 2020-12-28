@@ -1,0 +1,62 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:b="http://bootsfaces.net/ui" 
+	xmlns:igdo="www.igdo.lt/igdo"
+	xmlns:p="http://primefaces.org/ui">
+<h:head>
+
+	<link rel="stylesheet" type="text/css"
+		href="#{facesContext.externalContext.requestContextPath}/css/bootstrap.min.css" />
+	<link rel="stylesheet" type="text/css"
+		href="#{facesContext.externalContext.requestContextPath}/css/layout.css" />
+	<link rel="stylesheet" type="text/css"
+		href="#{facesContext.externalContext.requestContextPath}/css/main.css" />
+	<link rel="stylesheet" type="text/css"
+		href="#{facesContext.externalContext.requestContextPath}/css/artisane/style.css" />
+
+
+</h:head>
+<h:body>
+
+	<b:panel id="panelClient" title="Liste des Clients"
+		look="info" collapsible="false">
+		<b:row style="margin-top: 15px">
+			
+			<h:form >
+				
+				<b:dataTable id="tableClient" var="order"
+					value="#{artisaneBean.allcurrentOrders}" page-length="8"
+					responsive="true" style="margin:10px; width:710px !important ">
+
+
+					<b:dataTableColumn label="Code Client " value="#{order.client.id}" />
+					<b:dataTableColumn label="Nom Client" value="#{order.client.nom}" />
+					<b:dataTableColumn label="Prenom Client" value="#{order.client.prenom}" />
+					<b:dataTableColumn label="Email Client" value="#{order.client.email}" />
+					<b:dataTableColumn label="Tel Client" value="#{order.client.numTel}" />
+					<b:dataTableColumn label="Tel Client" value="#{order.client.adresse}" />
+					
+					<b:dataTableColumn label="Contacter" orderable="false"
+						searchable="false">
+						<b:commandButton id="traitOrder"  value="Envoi Email"
+					 />
+
+					</b:dataTableColumn>
+
+
+					</b:dataTable>
+			</h:form>
+
+
+			
+
+
+		</b:row>
+	</b:panel>
+
+</h:body>
+</html>

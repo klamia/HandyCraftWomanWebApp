@@ -1,0 +1,128 @@
+<div xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html" id="header">
+
+	<div class="logo"></div>
+	<div id="graphics">
+		<div class="right">
+			<ui:fragment rendered="#{compteEnCoursBean.loggedIn}">
+				<div>
+					<h:form>
+                    #{messages['header.user.welcome']} #{compteEnCoursBean.username}
+			        &#160;&#160;&#160;&#160;
+			        <h:commandLink id="logout" action="#{logoutBean.logout}"
+							value="#{messages['header.user.logout']}" />
+					</h:form>
+				</div>
+			</ui:fragment>
+			<ui:fragment rendered="#{not compteEnCoursBean.loggedIn}">
+				<div>
+					<h:form>
+					#{messages['header.user.new']}&#160;
+					<h:link outcome="/userType.xhtml"
+							value="#{messages['header.user.signup']}" />
+					&#160;&#160;&#160;&#160;
+					#{messages['header.user.registered']}&#160;
+					<h:link id="login" outcome="/login.xhtml"
+							value="#{messages['header.user.login']}" />
+					</h:form>
+				</div>
+			</ui:fragment>
+
+
+		</div>
+		<div class="left">
+			<h2 style="margin-top: 20px; margin-left: -16px;">Bienvenue à
+				vos stores de vente en ligne de produits artisanales</h2>
+		</div>
+		<div class="break"></div>
+
+	</div>
+	<br /> <br />
+	<!-- Tab meniu -->
+	<h:form id="tab">
+		<div id="menu">
+			<div class="right">
+				<ui:fragment rendered="#{compteEnCoursBean.loggedIn}">
+					<h:link id="cart" styleClass="menu_right"
+						outcome="/pages/cart/cart.xhtml">
+						<span class="cart">#{messages['index.cart']}(#{cartBean.count})</span>
+					</h:link>
+					<h:link id="preferences" styleClass="menu_right"
+						outcome="/pages/user/preferences.xhtml">
+						<span class="account">#{messages['index.preferences']}</span>
+					</h:link>
+				</ui:fragment>
+			</div>
+			<div class="left">
+
+				<ui:fragment rendered="#{compteEnCoursBean.loggedIn}">
+					<h:link id="mainC" styleClass="menu_left"
+						value="#{messages['index.home']}" outcome="/client/shopList.xhtml">
+					</h:link>
+
+					<h:link id="shopsC" styleClass="menu_left"
+						value="#{messages['index.shops']}"
+						outcome="/client/shopList.xhtml">
+					</h:link>
+					
+					<h:link id="produitsC" styleClass="menu_left"
+						value="#{messages['index.items']}" outcome="/client/prodRecommande.xhtml">
+					</h:link>
+					
+					<h:link id="reviewsC" styleClass="menu_left"
+						value="#{messages['index.reviews']}"
+						outcome="/content/reviews.xhtml">
+					</h:link>
+					<h:link id="discussionsC" styleClass="menu_left"
+						value="#{messages['index.discussions']}"
+						outcome="/content/discussions.xhtml">
+					</h:link>
+				</ui:fragment>
+
+				<ui:fragment rendered="#{not compteEnCoursBean.loggedIn}">
+					<h:link id="main" styleClass="menu_left"
+						value="#{messages['index.home']}" outcome="/public.xhtml">
+					</h:link>
+
+					<h:link id="shops" styleClass="menu_left"
+						value="#{messages['index.shops']}" outcome="/shops.xhtml">
+					</h:link>
+
+					<h:link id="produits" styleClass="menu_left"
+						value="#{messages['index.items']}" outcome="/items.xhtml">
+					</h:link>
+
+					<h:link id="contact" styleClass="menu_left" value="Contact"
+						outcome="/content/reviews.xhtml">
+					</h:link>
+					<h:link id="Apropos" styleClass="menu_left" value="A_Propos"
+						outcome="/content/discussions.xhtml">
+					</h:link>
+				</ui:fragment>
+			</div>
+		</div>
+	</h:form>
+
+	<br />
+
+	<ui:repeat value="#{shoppingBean.allParentCategories}" var="category">
+
+		<h:link value="#{category.name}" outcome="/index.xhtml">
+			<f:param name="categoryId" value="#{category.id}" />
+		</h:link>
+	</ui:repeat>
+
+
+	<script>
+		function setClass(id, className) {
+			obj = document.getElementById(id);
+			if (obj != null) {
+				obj.className = className;
+			}
+		}
+		setClass("#{tab}", "selected");
+	</script>
+
+</div>

@@ -1,0 +1,106 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:ui="http://java.sun.com/jsf/facelets"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:p="http://primefaces.org/ui"
+    xmlns:f="http://java.sun.com/jsf/core">
+    <h:head>
+    <link rel="stylesheet" type="text/css" media="screen" href="#{request.contextPath}/css/template4Principale4.css" />
+    <link href='http://fonts.googleapis.com/css?family=Condiment' rel='stylesheet' type='text/css' />
+    <link href='http://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'/>
+    <script src="js/jquery-1.7.min.js"></script>
+    <script src="js/jquery.easing.1.3.js"></script>
+    <script src="js/tms-0.4.x.js"></script>
+    <script>
+		$(document).ready(function(){				   	
+			$('.slider')._TMS({
+				show:0,
+				pauseOnHover:true,
+				prevBu:false,
+				nextBu:false,
+				playBu:false,
+				duration:1000,
+				preset:'fade',
+				pagination:true,
+				pagNums:false,
+				slideshow:7000,
+				numStatus:true,
+				banners:'fromRight',
+				waitBannerAnimation:false,
+				progressBar:false
+			});		
+		});
+    </script>
+    
+    
+    </h:head>
+    <h:body>
+    	
+    <ui:composition template="/WEB-INF/templates/template4Principale4.xhtml">
+      
+      <ui:define name="loginame">
+        <h:outputFormat value="Welcome, {0}">
+        <f:param value="#{loginBean.username}" />
+      </h:outputFormat>
+      </ui:define>	
+      
+      
+      <ui:define name="content" >
+      
+          <div id= "contenuHome4">
+          <div id= "contenuGauche4">
+           <h:form>
+           <p:menu toggleable="true" style="border:none !important; max-width:97%; width:97%; height:50%; background:inherit !important;   ">
+             <p:submenu label="Vente" style=" margin:5px 0 !important;" >
+                 <p:menuitem actionListener="#{navBean.setPage('/default')}"  update="contenuDroitPanel" />  
+                
+                 <p:menuitem value="Gestion Des Produits"  actionListener="#{navBean.setPage('/artisane/produit')}" update="contenuDroitPanel" />
+                 <p:menuitem value="Gestion Des Clients" actionListener="#{navBean.setPage('/artisane/clients')}" update="contenuDroitPanel" />
+                 
+                 <p:submenu label="Commandes Clients">
+                   <p:menuitem value=" Commandes Reçues "    actionListener="#{navBean.setPage('/artisane/commande-client/commande-recues')}"  update="contenuDroitPanel" />
+                   <p:menuitem value=" Commandes En cours "  actionListener="#{navBean.setPage('/artisane/commande-client/commande-en-cours')}"  update="contenuDroitPanel" />
+                   <p:menuitem value=" Commandes à Expédier "  actionListener="#{navBean.setPage('/artisane/commande-client/commande-a-livre')}"  update="contenuDroitPanel" />
+                   <p:menuitem value=" Commandes Délivrées "  actionListener="#{navBean.setPage('/artisane/commande-client/commande-delivrees')}"  update="contenuDroitPanel" />
+                 </p:submenu>
+                 
+                 
+                 
+             </p:submenu>
+             
+             <p:submenu label="Approvisionnement" style=" margin:5px 0 !important;" >
+                 <p:menuitem  value="Gestion Des Achats De Matières Premières" url="http://www.youtube.com" />
+                 <p:menuitem value="Gestion Des Fournisseurs " url="http://www.break.com" />
+                 
+            </p:submenu>
+            
+             <p:submenu label="Mon Compte / Mon Profil" style=" margin:5px 0 !important;" >
+                  <p:menuitem value="Modifier Compte" url="http://www.facebook.com" />
+                  <p:menuitem value="Modifier Profil" url="http://www.myspace.com" />
+                 
+            </p:submenu>
+          
+          </p:menu>
+      </h:form>
+      </div> 
+       <div id="contenuDroit4">
+            
+            
+               <p:panel id="contenuDroitPanel" style="border:none !important; " >
+               <ui:include src="#{navBean.page}.xhtml" />
+               </p:panel>
+                 
+         </div>  
+    
+     </div>
+ 
+     
+     </ui:define>
+   
+      
+
+    </ui:composition>
+    	
+    </h:body>
+
+</html>

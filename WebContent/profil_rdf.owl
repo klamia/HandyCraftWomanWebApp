@@ -1,0 +1,2634 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+    xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+    xmlns:Profil="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" > 
+  <rdf:Description rdf:about="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Shops_9">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Shops"/>
+    <Profil:seLocaliseA rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya_9"/>
+    <Profil:shopAppartient rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Artisane_5"/>
+    <Profil:hasId rdf:datatype="http://www.w3.org/2001/XMLSchema#long">9</Profil:hasId>
+    <Profil:wilaya_shop rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bejaia</Profil:wilaya_shop>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Client_45">
+    <Profil:hasId rdf:datatype="http://www.w3.org/2001/XMLSchema#long">45</Profil:hasId>
+    <Profil:vivreAu rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya_16"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Client"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#seLocaliseA">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Shops"/>
+    <rdfs:range rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A0">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+    <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#wilaya"/>
+    <swrl:argument1 rdf:resource="urn:swrl#c"/>
+    <swrl:argument2 rdf:resource="urn:swrl#val1"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Diplome">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Competence"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Tendance">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:equivalentClass rdf:nodeID="A1"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#CapaciteCognitive">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Aptitude"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A2">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+    <swrl:body rdf:nodeID="A3"/>
+    <swrl:head rdf:nodeID="A4"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:swrl#w1">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#aRecommandeLocal">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Shops"/>
+    <rdfs:range rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Client"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Client_46">
+    <rdf:type rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Client"/>
+    <Profil:vivreAu rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya_16"/>
+    <Profil:hasId rdf:datatype="http://www.w3.org/2001/XMLSchema#long">46</Profil:hasId>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A5">
+    <rdf:first rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Couleur_4"/>
+    <rdf:rest rdf:nodeID="A6"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#aCapaciteSensorielle">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#aCapacitePhysique"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#User"/>
+    <rdfs:range rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#CapaciteSensorielle"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A7">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+    <swrl:body rdf:nodeID="A8"/>
+    <swrl:head rdf:nodeID="A9"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A10">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+    <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#aRecommandeProdCoul"/>
+    <swrl:argument1 rdf:resource="urn:swrl#p"/>
+    <swrl:argument2 rdf:resource="urn:swrl#c"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#appartientAShop">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <owl:inverseOf rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#contientProd"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Produit"/>
+    <rdfs:range rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Shops"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Competence">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#nom_wilaya">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:swrl#w2">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A11">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+    <swrl:classPredicate rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Artisane"/>
+    <swrl:argument1 rdf:resource="urn:swrl#a"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#niveau_informatique">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Informatique"/>
+    <rdfs:range rdf:nodeID="A12"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A9">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:first rdf:nodeID="A10"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A13">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:first rdf:nodeID="A14"/>
+    <rdf:rest rdf:nodeID="A15"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:swrl#t2">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#prenom">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#User"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A16">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:first rdf:nodeID="A17"/>
+    <rdf:rest rdf:nodeID="A18"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Shops_5">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Shops"/>
+    <Profil:seLocaliseA rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya_6"/>
+    <Profil:shopAppartient rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Artisane_2"/>
+    <Profil:hasId rdf:datatype="http://www.w3.org/2001/XMLSchema#long">5</Profil:hasId>
+    <Profil:wilaya_shop rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bejaia</Profil:wilaya_shop>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#TagUtilisateur">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Tag"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A19">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:first rdf:nodeID="A20"/>
+    <rdf:rest rdf:nodeID="A21"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A22">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+    <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#appartientADomaine"/>
+    <swrl:argument1 rdf:resource="urn:swrl#p"/>
+    <swrl:argument2 rdf:resource="urn:swrl#d"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A23">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+    <swrl:classPredicate rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Client"/>
+    <swrl:argument1 rdf:resource="urn:swrl#c"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A24">
+    <rdf:first rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Activite_4"/>
+    <rdf:rest rdf:nodeID="A25"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A26">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:first rdf:nodeID="A11"/>
+    <rdf:rest rdf:nodeID="A13"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Aptitude">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:swrl#c">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#aRecommandeShop">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Shops"/>
+    <rdfs:range rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Client"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Artisane">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#User"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya_31">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya"/>
+    <Profil:voisin rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya_46"/>
+    <Profil:hasId rdf:datatype="http://www.w3.org/2001/XMLSchema#long">31</Profil:hasId>
+    <Profil:nom_wilaya rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Oran</Profil:nom_wilaya>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya_46">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya"/>
+    <Profil:hasId rdf:datatype="http://www.w3.org/2001/XMLSchema#long">46</Profil:hasId>
+    <Profil:nom_wilaya rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ain_Temouchent</Profil:nom_wilaya>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#pouvoir_achat">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#User"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A27">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+    <swrl:classPredicate rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Shops"/>
+    <swrl:argument1 rdf:resource="urn:swrl#s"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A28">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+    <swrl:classPredicate rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Tendance"/>
+    <swrl:argument1 rdf:resource="urn:swrl#t2"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A29">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:first rdf:nodeID="A30"/>
+    <rdf:rest rdf:nodeID="A19"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#utilisePar">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <owl:inverseOf rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#utiliseTag"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Tag"/>
+    <rdfs:range rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#User"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Shops_6">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Shops"/>
+    <Profil:seLocaliseA rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya_16"/>
+    <Profil:shopAppartient rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Artisane_3"/>
+    <Profil:hasId rdf:datatype="http://www.w3.org/2001/XMLSchema#long">6</Profil:hasId>
+    <Profil:wilaya_shop rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Alger</Profil:wilaya_shop>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Informatique">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Competence"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#TagProduit">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Tag"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya_32">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya"/>
+    <Profil:voisin rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya_45"/>
+    <Profil:voisin rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya_47"/>
+    <Profil:hasId rdf:datatype="http://www.w3.org/2001/XMLSchema#long">32</Profil:hasId>
+    <Profil:nom_wilaya rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El_Bayadh</Profil:nom_wilaya>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A31">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+    <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#aCouleur"/>
+    <swrl:argument1 rdf:resource="urn:swrl#p"/>
+    <swrl:argument2 rdf:resource="urn:swrl#l1"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya_45">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya"/>
+    <Profil:hasId rdf:datatype="http://www.w3.org/2001/XMLSchema#long">45</Profil:hasId>
+    <Profil:nom_wilaya rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Naama</Profil:nom_wilaya>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A32">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:first rdf:nodeID="A33"/>
+    <rdf:rest rdf:nodeID="A34"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A35">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+    <rdf:first>Avancer</rdf:first>
+    <rdf:rest rdf:nodeID="A36"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Tendance_1">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Tendance"/>
+    <Profil:hasId rdf:datatype="http://www.w3.org/2001/XMLSchema#long">1</Profil:hasId>
+    <Profil:tendance rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Moderne</Profil:tendance>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Shops_7">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Shops"/>
+    <Profil:seLocaliseA rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya_6"/>
+    <Profil:shopAppartient rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Artisane_4"/>
+    <Profil:hasId rdf:datatype="http://www.w3.org/2001/XMLSchema#long">7</Profil:hasId>
+    <Profil:wilaya_shop rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bejaia</Profil:wilaya_shop>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A37">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:first rdf:nodeID="A38"/>
+    <rdf:rest rdf:nodeID="A39"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A40">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+    <swrl:classPredicate rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Client"/>
+    <swrl:argument1 rdf:resource="urn:swrl#c"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A41">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#SameIndividualAtom"/>
+    <swrl:argument1 rdf:resource="urn:swrl#t1"/>
+    <swrl:argument2 rdf:resource="urn:swrl#t2"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:swrl#a">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A42">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+    <rdf:first>Poterie</rdf:first>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya_48">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya"/>
+    <Profil:hasId rdf:datatype="http://www.w3.org/2001/XMLSchema#long">48</Profil:hasId>
+    <Profil:nom_wilaya rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Relizane</Profil:nom_wilaya>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A43">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+    <rdf:first>Avancer</rdf:first>
+    <rdf:rest rdf:nodeID="A44"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A45">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:first rdf:nodeID="A22"/>
+    <rdf:rest rdf:nodeID="A32"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A46">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:first rdf:nodeID="A28"/>
+    <rdf:rest rdf:nodeID="A47"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Client_1">
+    <rdf:type rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Client"/>
+    <Profil:vivreAu rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya_16"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <Profil:aPreference rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#preference_1"/>
+    <Profil:aInteret rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#CentreInteret_6"/>
+    <Profil:prenom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">prenom_cl1</Profil:prenom>
+    <Profil:nom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">nom_cl1</Profil:nom>
+    <Profil:aInteret rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#CentreInteret_7"/>
+    <Profil:wilaya rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Alger</Profil:wilaya>
+    <Profil:hasId rdf:datatype="http://www.w3.org/2001/XMLSchema#long">1</Profil:hasId>
+    <Profil:aPreference rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Preference_3"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A25">
+    <rdf:first rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Activite_5"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A36">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+    <rdf:first>Elve</rdf:first>
+    <rdf:rest rdf:nodeID="A48"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Tendance_2">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Tendance"/>
+    <Profil:hasId rdf:datatype="http://www.w3.org/2001/XMLSchema#long">2</Profil:hasId>
+    <Profil:tendance rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Traditionnel</Profil:tendance>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A49">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+    <swrl:classPredicate rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Client"/>
+    <swrl:argument1 rdf:resource="urn:swrl#c"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Shops_8">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Shops"/>
+    <Profil:seLocaliseA rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya_16"/>
+    <Profil:shopAppartient rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Artisane_4"/>
+    <Profil:hasId rdf:datatype="http://www.w3.org/2001/XMLSchema#long">8</Profil:hasId>
+    <Profil:wilaya_shop rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Alger</Profil:wilaya_shop>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#contientProd">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Shops"/>
+    <rdfs:range rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Produit"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A50">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+    <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#aPreference"/>
+    <swrl:argument1 rdf:resource="urn:swrl#c"/>
+    <swrl:argument2 rdf:resource="urn:swrl#r"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Client">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#User"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Client_2">
+    <Profil:aPreference rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Preference_4"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Client"/>
+    <Profil:aInteret rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#CentreInteret_7"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <Profil:prenom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">prenom_cl2</Profil:prenom>
+    <Profil:aPreference rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Preference_5"/>
+    <Profil:hasId rdf:datatype="http://www.w3.org/2001/XMLSchema#long">2</Profil:hasId>
+    <Profil:wilaya rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Oran</Profil:wilaya>
+    <Profil:vivreAu rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya_31"/>
+    <Profil:nom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">nom_cl2</Profil:nom>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A51">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+    <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#appartientAShop"/>
+    <swrl:argument1 rdf:resource="urn:swrl#p"/>
+    <swrl:argument2 rdf:resource="urn:swrl#s"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya_20">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya"/>
+    <Profil:voisin rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya_22"/>
+    <Profil:voisin rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya_29"/>
+    <Profil:voisin rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya_32"/>
+    <Profil:hasId rdf:datatype="http://www.w3.org/2001/XMLSchema#long">20</Profil:hasId>
+    <Profil:nom_wilaya rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Saida</Profil:nom_wilaya>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A52">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+    <rdf:first>Patisserie</rdf:first>
+    <rdf:rest rdf:nodeID="A42"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A53">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+    <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#aTendance"/>
+    <swrl:argument1 rdf:resource="urn:swrl#p"/>
+    <swrl:argument2 rdf:resource="urn:swrl#t2"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya_47">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya"/>
+    <Profil:hasId rdf:datatype="http://www.w3.org/2001/XMLSchema#long">47</Profil:hasId>
+    <Profil:nom_wilaya rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ghardaia</Profil:nom_wilaya>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya_30">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya"/>
+    <Profil:voisin rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya_33"/>
+    <Profil:voisin rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya_39"/>
+    <Profil:voisin rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya_47"/>
+    <Profil:hasId rdf:datatype="http://www.w3.org/2001/XMLSchema#long">30</Profil:hasId>
+    <Profil:nom_wilaya rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ouargla</Profil:nom_wilaya>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A54">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:first rdf:nodeID="A55"/>
+    <rdf:rest rdf:nodeID="A56"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:swrl#val1">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya_35">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya"/>
+    <Profil:voisin rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya_26"/>
+    <Profil:hasId rdf:datatype="http://www.w3.org/2001/XMLSchema#long">35</Profil:hasId>
+    <Profil:nom_wilaya rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Boumerdes</Profil:nom_wilaya>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya_42">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya"/>
+    <Profil:voisin rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya_44"/>
+    <Profil:hasId rdf:datatype="http://www.w3.org/2001/XMLSchema#long">42</Profil:hasId>
+    <Profil:nom_wilaya rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tipaza</Profil:nom_wilaya>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#aCapaciteCongnitive">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#aAptitude"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#User"/>
+    <rdfs:range rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#CapaciteCognitive"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A57">
+    <rdf:first rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Tendance_1"/>
+    <rdf:rest rdf:nodeID="A58"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A3">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:first rdf:nodeID="A59"/>
+    <rdf:rest rdf:nodeID="A60"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A61">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:first rdf:nodeID="A62"/>
+    <rdf:rest rdf:nodeID="A63"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya_7">
+    <Profil:voisin rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya_39"/>
+    <Profil:voisin rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya_17"/>
+    <Profil:voisin rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya_5"/>
+    <Profil:voisin rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya_40"/>
+    <Profil:hasId rdf:datatype="http://www.w3.org/2001/XMLSchema#long">7</Profil:hasId>
+    <Profil:voisin rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya_28"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <Profil:nom_wilaya rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Biskra</Profil:nom_wilaya>
+    <Profil:voisin rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya_30"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya_21">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya"/>
+    <Profil:voisin rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya_23"/>
+    <Profil:voisin rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya_24"/>
+    <Profil:voisin rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya_25"/>
+    <Profil:voisin rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya_43"/>
+    <Profil:hasId rdf:datatype="http://www.w3.org/2001/XMLSchema#long">21</Profil:hasId>
+    <Profil:nom_wilaya rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Skikda</Profil:nom_wilaya>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A64">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:first rdf:nodeID="A0"/>
+    <rdf:rest rdf:nodeID="A65"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:swrl#l1">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Client_3">
+    <Profil:aPreference rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Preference_3"/>
+    <Profil:hasId rdf:datatype="http://www.w3.org/2001/XMLSchema#long">3</Profil:hasId>
+    <rdf:type rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Client"/>
+    <Profil:prenom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">prenom_cl3</Profil:prenom>
+    <Profil:nom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">nom_cl3</Profil:nom>
+    <Profil:aInteret rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#CentreInteret_6"/>
+    <Profil:vivreAu rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya_16"/>
+    <Profil:aPreference rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Preference_2"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <Profil:wilaya rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Alger</Profil:wilaya>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A66">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:first rdf:nodeID="A67"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A68">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:first rdf:nodeID="A69"/>
+    <rdf:rest rdf:nodeID="A70"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A71">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:first rdf:nodeID="A72"/>
+    <rdf:rest rdf:nodeID="A73"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A74">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:first rdf:nodeID="A75"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Shops">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya_15">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya"/>
+    <Profil:voisin rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya_34"/>
+    <Profil:voisin rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya_35"/>
+    <Profil:hasId rdf:datatype="http://www.w3.org/2001/XMLSchema#long">15</Profil:hasId>
+    <Profil:nom_wilaya rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tizi_Ouzou</Profil:nom_wilaya>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Preference_3">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Preference"/>
+    <Profil:prefTendance rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Tendance_1"/>
+    <Profil:hasId rdf:datatype="http://www.w3.org/2001/XMLSchema#long">3</Profil:hasId>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A48">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+    <rdf:first>Faible</rdf:first>
+    <rdf:rest rdf:nodeID="A76"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Produit_4">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Produit"/>
+    <Profil:aTendance rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Tendance_2"/>
+    <Profil:appartientAShop rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Shops_1"/>
+    <Profil:hasId rdf:datatype="http://www.w3.org/2001/XMLSchema#long">4</Profil:hasId>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A77">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:first rdf:nodeID="A40"/>
+    <rdf:rest rdf:nodeID="A78"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#vivreAu">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#User"/>
+    <rdfs:range rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A33">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+    <swrl:classPredicate rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Client"/>
+    <swrl:argument1 rdf:resource="urn:swrl#c"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A60">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:first rdf:nodeID="A79"/>
+    <rdf:rest rdf:nodeID="A80"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Shops_1">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Shops"/>
+    <Profil:seLocaliseA rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya_16"/>
+    <Profil:shopAppartient rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Artisane_1"/>
+    <Profil:hasId rdf:datatype="http://www.w3.org/2001/XMLSchema#long">1</Profil:hasId>
+    <Profil:wilaya_shop rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Alger</Profil:wilaya_shop>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#aCompInformatique">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#aCompetence"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#User"/>
+    <rdfs:range rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Informatique"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A81">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+    <swrl:classPredicate rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Preference"/>
+    <swrl:argument1 rdf:resource="urn:swrl#r"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya_41">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya"/>
+    <Profil:hasId rdf:datatype="http://www.w3.org/2001/XMLSchema#long">41</Profil:hasId>
+    <Profil:nom_wilaya rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Souk_Ahras</Profil:nom_wilaya>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya_36">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya"/>
+    <Profil:voisin rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya_41"/>
+    <Profil:hasId rdf:datatype="http://www.w3.org/2001/XMLSchema#long">36</Profil:hasId>
+    <Profil:nom_wilaya rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El_Tarf</Profil:nom_wilaya>
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:swrl#val2">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Produit_900">
+    <rdf:type rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Produit"/>
+    <Profil:appartientAShop rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Shops_2"/>
+    <Profil:aCouleur rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Couleur_2"/>
+    <Profil:aTendance rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Tendance_2"/>
+    <Profil:hasId rdf:datatype="http://www.w3.org/2001/XMLSchema#long">900</Profil:hasId>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya_8">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya"/>
+    <Profil:voisin rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya_32"/>
+    <Profil:voisin rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya_37"/>
+    <Profil:voisin rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya_45"/>
+    <Profil:hasId rdf:datatype="http://www.w3.org/2001/XMLSchema#long">8</Profil:hasId>
+    <Profil:nom_wilaya rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bechar</Profil:nom_wilaya>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A82">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:first rdf:nodeID="A83"/>
+    <rdf:rest rdf:nodeID="A61"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A4">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:first rdf:nodeID="A84"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:swrl#l2">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A85">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+    <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#aShop"/>
+    <swrl:argument1 rdf:resource="urn:swrl#a"/>
+    <swrl:argument2 rdf:resource="urn:swrl#s"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#aDiplome">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#aCompetence"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#User"/>
+    <rdfs:range rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Diplome"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#niveau_langue_ecriture">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Langue"/>
+    <rdfs:range rdf:nodeID="A86"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#sex">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#User"/>
+    <rdfs:range rdf:nodeID="A87"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya_22">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya"/>
+    <Profil:voisin rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya_29"/>
+    <Profil:voisin rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya_31"/>
+    <Profil:voisin rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya_32"/>
+    <Profil:voisin rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya_45"/>
+    <Profil:voisin rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya_46"/>
+    <Profil:hasId rdf:datatype="http://www.w3.org/2001/XMLSchema#long">22</Profil:hasId>
+    <Profil:nom_wilaya rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sidi_Bel_Abbes</Profil:nom_wilaya>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Client_4">
+    <Profil:hasId rdf:datatype="http://www.w3.org/2001/XMLSchema#long">4</Profil:hasId>
+    <Profil:aInteret rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#CentreInteret_6"/>
+    <Profil:nom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">nom_cl5</Profil:nom>
+    <Profil:vivreAu rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya_6"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <Profil:wilaya rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bejaia</Profil:wilaya>
+    <rdf:type rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Client"/>
+    <Profil:aPreference rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Preference_4"/>
+    <Profil:prenom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">prenom_cl5</Profil:prenom>
+    <Profil:aInteret rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#CentreInteret_7"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A88">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:first rdf:nodeID="A50"/>
+    <rdf:rest rdf:nodeID="A71"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A89">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+    <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#aInteret"/>
+    <swrl:argument1 rdf:resource="urn:swrl#c"/>
+    <swrl:argument2 rdf:resource="urn:swrl#i"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Couleur_1">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Couleur"/>
+    <Profil:couleur rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Blanc</Profil:couleur>
+    <Profil:hasId rdf:datatype="http://www.w3.org/2001/XMLSchema#long">1</Profil:hasId>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A90">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:first rdf:nodeID="A91"/>
+    <rdf:rest rdf:nodeID="A92"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya_16">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya"/>
+    <Profil:voisin rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya_35"/>
+    <Profil:voisin rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya_42"/>
+    <Profil:voisin rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya_9"/>
+    <Profil:hasId rdf:datatype="http://www.w3.org/2001/XMLSchema#long">16</Profil:hasId>
+    <Profil:nom_wilaya rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Alger</Profil:nom_wilaya>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A93">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+    <swrl:classPredicate rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Shops"/>
+    <swrl:argument1 rdf:resource="urn:swrl#s"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Preference_4">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Preference"/>
+    <Profil:prefTendance rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Tendance_2"/>
+    <Profil:hasId rdf:datatype="http://www.w3.org/2001/XMLSchema#long">4</Profil:hasId>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A94">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+    <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#aShop"/>
+    <swrl:argument1 rdf:resource="urn:swrl#a"/>
+    <swrl:argument2 rdf:resource="urn:swrl#s"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#nom">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#User"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A12">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+    <owl:oneOf rdf:nodeID="A43"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A78">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:first rdf:nodeID="A95"/>
+    <rdf:rest rdf:nodeID="A37"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Shops_2">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Shops"/>
+    <Profil:seLocaliseA rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya_31"/>
+    <Profil:shopAppartient rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Artisane_1"/>
+    <Profil:hasId rdf:datatype="http://www.w3.org/2001/XMLSchema#long">2</Profil:hasId>
+    <Profil:wilaya_shop rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Oran</Profil:wilaya_shop>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Produit_5">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Produit"/>
+    <Profil:aTendance rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Tendance_1"/>
+    <Profil:appartientAShop rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Shops_1"/>
+    <Profil:hasId rdf:datatype="http://www.w3.org/2001/XMLSchema#long">5</Profil:hasId>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A96">
+    <rdf:first rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Couleur_1"/>
+    <rdf:rest rdf:nodeID="A97"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A98">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+    <swrl:classPredicate rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#CentreInteret"/>
+    <swrl:argument1 rdf:resource="urn:swrl#i"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya_44">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya"/>
+    <Profil:hasId rdf:datatype="http://www.w3.org/2001/XMLSchema#long">44</Profil:hasId>
+    <Profil:nom_wilaya rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ain_Defla</Profil:nom_wilaya>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya_33">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya"/>
+    <Profil:hasId rdf:datatype="http://www.w3.org/2001/XMLSchema#long">33</Profil:hasId>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Client_5">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Client"/>
+    <Profil:aPreference rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#preference_1"/>
+    <Profil:vivreAu rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya_16"/>
+    <Profil:hasId rdf:datatype="http://www.w3.org/2001/XMLSchema#long">5</Profil:hasId>
+    <Profil:wilaya rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Alger</Profil:wilaya>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A99">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+    <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#appartientAShop"/>
+    <swrl:argument1 rdf:resource="urn:swrl#p"/>
+    <swrl:argument2 rdf:resource="urn:swrl#s"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A100">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:first rdf:nodeID="A101"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya_23">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya"/>
+    <Profil:voisin rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya_24"/>
+    <Profil:voisin rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya_36"/>
+    <Profil:hasId rdf:datatype="http://www.w3.org/2001/XMLSchema#long">23</Profil:hasId>
+    <Profil:nom_wilaya rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Annaba</Profil:nom_wilaya>
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:swrl#val">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Preference_5">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Preference"/>
+    <Profil:prefCouleur rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Couleur_2"/>
+    <Profil:hasId rdf:datatype="http://www.w3.org/2001/XMLSchema#long">5</Profil:hasId>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A102">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+    <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#aRecommandeShop"/>
+    <swrl:argument1 rdf:resource="urn:swrl#s"/>
+    <swrl:argument2 rdf:resource="urn:swrl#c"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A103">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+    <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#aDomaine"/>
+    <swrl:argument1 rdf:resource="urn:swrl#a"/>
+    <swrl:argument2 rdf:resource="urn:swrl#d"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A104">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+    <swrl:classPredicate rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Artisane"/>
+    <swrl:argument1 rdf:resource="urn:swrl#a"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#utiliseTag">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#User"/>
+    <rdfs:range rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Tag"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A105">
+    <rdf:first rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Couleur_2"/>
+    <rdf:rest rdf:nodeID="A106"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A107">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+    <swrl:classPredicate rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Tendance"/>
+    <swrl:argument1 rdf:resource="urn:swrl#t1"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya_5">
+    <Profil:voisin rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya_28"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <Profil:voisin rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya_4"/>
+    <Profil:voisin rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya_7"/>
+    <Profil:voisin rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya_19"/>
+    <Profil:nom_wilaya rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Batna</Profil:nom_wilaya>
+    <Profil:hasId rdf:datatype="http://www.w3.org/2001/XMLSchema#long">5</Profil:hasId>
+    <Profil:voisin rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya_43"/>
+    <Profil:voisin rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya_40"/>
+    <Profil:voisin rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya_34"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A108">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+    <rdf:first>Moyen</rdf:first>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya_13">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya"/>
+    <Profil:voisin rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya_22"/>
+    <Profil:voisin rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya_45"/>
+    <Profil:voisin rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya_46"/>
+    <Profil:hasId rdf:datatype="http://www.w3.org/2001/XMLSchema#long">13</Profil:hasId>
+    <Profil:nom_wilaya rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tlemcen</Profil:nom_wilaya>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Shops_3">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Shops"/>
+    <Profil:seLocaliseA rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya_16"/>
+    <Profil:shopAppartient rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Artisane_2"/>
+    <Profil:hasId rdf:datatype="http://www.w3.org/2001/XMLSchema#long">3</Profil:hasId>
+    <Profil:wilaya_shop rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Alger</Profil:wilaya_shop>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A109">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+    <swrl:body rdf:nodeID="A82"/>
+    <swrl:head rdf:nodeID="A110"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A111">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:first rdf:nodeID="A112"/>
+    <rdf:rest rdf:nodeID="A113"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#wilaya_shop">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Shops"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya_6">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya"/>
+    <Profil:voisin rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya_10"/>
+    <Profil:voisin rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya_15"/>
+    <Profil:voisin rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya_18"/>
+    <Profil:voisin rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya_19"/>
+    <Profil:voisin rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya_34"/>
+    <Profil:hasId rdf:datatype="http://www.w3.org/2001/XMLSchema#long">6</Profil:hasId>
+    <Profil:nom_wilaya rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bejaia</Profil:nom_wilaya>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Artisane_1">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Artisane"/>
+    <Profil:aDomaine rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Activite_4"/>
+    <Profil:hasId rdf:datatype="http://www.w3.org/2001/XMLSchema#long">1</Profil:hasId>
+    <Profil:nom>Nom_1</Profil:nom>
+    <Profil:prenom>Prenom_1</Profil:prenom>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#utiliseTagProd">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#utiliseTag"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#User"/>
+    <rdfs:range rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#TagProduit"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A114">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:first rdf:nodeID="A115"/>
+    <rdf:rest rdf:nodeID="A116"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya_34">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya"/>
+    <Profil:hasId rdf:datatype="http://www.w3.org/2001/XMLSchema#long">34</Profil:hasId>
+    <Profil:nom_wilaya rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bordj_Bou_Arreridj</Profil:nom_wilaya>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya_43">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya"/>
+    <Profil:hasId rdf:datatype="http://www.w3.org/2001/XMLSchema#long">43</Profil:hasId>
+    <Profil:nom_wilaya rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mila</Profil:nom_wilaya>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Fournisseur">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#User"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya_24">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya"/>
+    <Profil:voisin rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya_25"/>
+    <Profil:voisin rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya_36"/>
+    <Profil:voisin rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya_41"/>
+    <Profil:hasId rdf:datatype="http://www.w3.org/2001/XMLSchema#long">24</Profil:hasId>
+    <Profil:nom_wilaya rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Guelma</Profil:nom_wilaya>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A117">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:oneOf rdf:nodeID="A96"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A75">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+    <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#appartientADomaine"/>
+    <swrl:argument1 rdf:resource="urn:swrl#p"/>
+    <swrl:argument2 rdf:resource="urn:swrl#d"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A76">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+    <rdf:first>Moyen</rdf:first>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A118">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+    <swrl:classPredicate rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Couleur"/>
+    <swrl:argument1 rdf:resource="urn:swrl#l1"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A15">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:first rdf:nodeID="A99"/>
+    <rdf:rest rdf:nodeID="A119"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A101">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+    <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#seLocaliseA"/>
+    <swrl:argument1 rdf:resource="urn:swrl#s"/>
+    <swrl:argument2 rdf:resource="urn:swrl#w2"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A55">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+    <swrl:classPredicate rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Couleur"/>
+    <swrl:argument1 rdf:resource="urn:swrl#l2"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Shops_4">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Shops"/>
+    <Profil:seLocaliseA rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya_31"/>
+    <Profil:shopAppartient rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Artisane_2"/>
+    <Profil:hasId rdf:datatype="http://www.w3.org/2001/XMLSchema#long">4</Profil:hasId>
+    <Profil:wilaya_shop rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Oran</Profil:wilaya_shop>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A110">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:first rdf:nodeID="A120"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A30">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+    <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#aCouleur"/>
+    <swrl:argument1 rdf:resource="urn:swrl#p"/>
+    <swrl:argument2 rdf:resource="urn:swrl#l2"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Produit_3">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Produit"/>
+    <Profil:aTendance rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Tendance_1"/>
+    <Profil:appartientAShop rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Shops_1"/>
+    <Profil:hasId rdf:datatype="http://www.w3.org/2001/XMLSchema#long">3</Profil:hasId>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A121">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+    <swrl:body rdf:nodeID="A111"/>
+    <swrl:head rdf:nodeID="A74"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya_14">
+    <Profil:voisin rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya_17"/>
+    <Profil:voisin rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya_38"/>
+    <Profil:voisin rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya_20"/>
+    <Profil:voisin rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya_29"/>
+    <Profil:voisin rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya_32"/>
+    <Profil:voisin rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya_48"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <Profil:nom_wilaya rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tiaret</Profil:nom_wilaya>
+    <Profil:hasId rdf:datatype="http://www.w3.org/2001/XMLSchema#long">14</Profil:hasId>
+    <rdf:type rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Artisane_2">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Artisane"/>
+    <Profil:aDomaine rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Activite_3"/>
+    <Profil:hasId rdf:datatype="http://www.w3.org/2001/XMLSchema#long">2</Profil:hasId>
+    <Profil:lieu_naissance>Bejaia</Profil:lieu_naissance>
+    <Profil:nom>nom_2</Profil:nom>
+    <Profil:prenom>prenom_2</Profil:prenom>
+    <Profil:sex>Femelle</Profil:sex>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Personalite">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A122">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:first rdf:nodeID="A123"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya_25">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya"/>
+    <Profil:voisin rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya_43"/>
+    <Profil:hasId rdf:datatype="http://www.w3.org/2001/XMLSchema#long">25</Profil:hasId>
+    <Profil:nom_wilaya rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Constantine</Profil:nom_wilaya>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya_39">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya"/>
+    <Profil:voisin rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya_40"/>
+    <Profil:hasId rdf:datatype="http://www.w3.org/2001/XMLSchema#long">39</Profil:hasId>
+    <Profil:nom_wilaya rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El_Oued</Profil:nom_wilaya>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/islam/ontologies/2018/0/Profil">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#aPersonalite">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Artisane"/>
+    <rdfs:range rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Personalite"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A124">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:first rdf:nodeID="A98"/>
+    <rdf:rest rdf:nodeID="A114"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#preferenceDesc">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Preference"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A18">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:first rdf:nodeID="A125"/>
+    <rdf:rest rdf:nodeID="A126"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:swrl#t1">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A127">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:first rdf:nodeID="A102"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya_11">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya"/>
+    <Profil:voisin rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya_30"/>
+    <Profil:voisin rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya_33"/>
+    <Profil:voisin rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya_47"/>
+    <Profil:hasId rdf:datatype="http://www.w3.org/2001/XMLSchema#long">11</Profil:hasId>
+    <Profil:nom_wilaya rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tamanrasset</Profil:nom_wilaya>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya_3">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya"/>
+    <Profil:voisin rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya_14"/>
+    <Profil:voisin rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya_17"/>
+    <Profil:voisin rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya_32"/>
+    <Profil:voisin rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya_47"/>
+    <Profil:hasId rdf:datatype="http://www.w3.org/2001/XMLSchema#long">3</Profil:hasId>
+    <Profil:nom_wilaya rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Laghouat</Profil:nom_wilaya>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Produit_8">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Produit"/>
+    <Profil:aCouleur rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Couleur_7"/>
+    <Profil:aTendance rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Tendance_2"/>
+    <Profil:appartientAShop rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Shops_7"/>
+    <Profil:hasId rdf:datatype="http://www.w3.org/2001/XMLSchema#long">8</Profil:hasId>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A14">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+    <swrl:classPredicate rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Activite"/>
+    <swrl:argument1 rdf:resource="urn:swrl#d"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A128">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:first rdf:nodeID="A129"/>
+    <rdf:rest rdf:nodeID="A130"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A131">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:first rdf:nodeID="A132"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Artisane_3">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Artisane"/>
+    <Profil:aDomaine rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Activite_3"/>
+    <Profil:hasId rdf:datatype="http://www.w3.org/2001/XMLSchema#long">3</Profil:hasId>
+    <Profil:lieu_naissance>Alger</Profil:lieu_naissance>
+    <Profil:nom>nom_3</Profil:nom>
+    <Profil:prenom>prenom_3</Profil:prenom>
+    <Profil:sex>Femelle</Profil:sex>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A133">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+    <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#vivreAu"/>
+    <swrl:argument1 rdf:resource="urn:swrl#c"/>
+    <swrl:argument2 rdf:resource="urn:swrl#w1"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya_26">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya"/>
+    <Profil:voisin rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya_28"/>
+    <Profil:voisin rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya_38"/>
+    <Profil:voisin rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya_44"/>
+    <Profil:hasId rdf:datatype="http://www.w3.org/2001/XMLSchema#long">26</Profil:hasId>
+    <Profil:nom_wilaya rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Medea</Profil:nom_wilaya>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A134">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+    <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#interet_libelle"/>
+    <swrl:argument1 rdf:resource="urn:swrl#i"/>
+    <swrl:argument2 rdf:resource="urn:swrl#val"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Personalite_3">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Personalite"/>
+    <Profil:hasId rdf:datatype="http://www.w3.org/2001/XMLSchema#long">3</Profil:hasId>
+    <Profil:nom_personalite rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Timide</Profil:nom_personalite>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A126">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:first rdf:nodeID="A135"/>
+    <rdf:rest rdf:nodeID="A136"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#lieu_naissance">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#User"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A137">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+    <swrl:body rdf:nodeID="A138"/>
+    <swrl:head rdf:nodeID="A127"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A120">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+    <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#aRecommandeProd"/>
+    <swrl:argument1 rdf:resource="urn:swrl#p"/>
+    <swrl:argument2 rdf:resource="urn:swrl#c"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya_12">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya"/>
+    <Profil:voisin rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya_39"/>
+    <Profil:voisin rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya_40"/>
+    <Profil:voisin rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya_41"/>
+    <Profil:hasId rdf:datatype="http://www.w3.org/2001/XMLSchema#long">12</Profil:hasId>
+    <Profil:nom_wilaya rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tebessa</Profil:nom_wilaya>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya_4">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <Profil:voisin rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya_25"/>
+    <Profil:hasId rdf:datatype="http://www.w3.org/2001/XMLSchema#long">4</Profil:hasId>
+    <Profil:voisin rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya_24"/>
+    <Profil:voisin rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya_43"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya"/>
+    <Profil:nom_wilaya rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Oum_El_Bouaghi</Profil:nom_wilaya>
+    <Profil:voisin rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya_42"/>
+    <Profil:voisin rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya_19"/>
+    <Profil:voisin rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya_5"/>
+    <Profil:voisin rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya_41"/>
+    <Profil:voisin rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya_12"/>
+    <Profil:voisin rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya_40"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#aRecommandeProd">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Produit"/>
+    <rdfs:range rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Client"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Produit_9">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Produit"/>
+    <Profil:aCouleur rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Couleur_9"/>
+    <Profil:aTendance rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Tendance_1"/>
+    <Profil:appartientAShop rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Shops_7"/>
+    <Profil:hasId rdf:datatype="http://www.w3.org/2001/XMLSchema#long">9</Profil:hasId>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Couleur">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:equivalentClass rdf:nodeID="A117"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A92">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:first rdf:nodeID="A103"/>
+    <rdf:rest rdf:nodeID="A124"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A139">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+    <swrl:body rdf:nodeID="A140"/>
+    <swrl:head rdf:nodeID="A131"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#wilaya">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#User"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Langue">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Competence"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya_37">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya"/>
+    <Profil:hasId rdf:datatype="http://www.w3.org/2001/XMLSchema#long">37</Profil:hasId>
+    <Profil:nom_wilaya rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tindouf</Profil:nom_wilaya>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Preference">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Artisane_4">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Artisane"/>
+    <Profil:aDomaine rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Activite_5"/>
+    <Profil:hasId rdf:datatype="http://www.w3.org/2001/XMLSchema#long">4</Profil:hasId>
+    <Profil:lieu_naissance>Bejaia</Profil:lieu_naissance>
+    <Profil:nom>nom_4</Profil:nom>
+    <Profil:prenom>prenom_4</Profil:prenom>
+    <Profil:sex>Femelle</Profil:sex>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A141">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+    <rdf:first>Femelle</rdf:first>
+    <rdf:rest rdf:nodeID="A142"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Personalite_2">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Personalite"/>
+    <Profil:hasId rdf:datatype="http://www.w3.org/2001/XMLSchema#long">2</Profil:hasId>
+    <Profil:nom_personalite rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ponctuelle</Profil:nom_personalite>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A125">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+    <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#aPreference"/>
+    <swrl:argument1 rdf:resource="urn:swrl#c"/>
+    <swrl:argument2 rdf:resource="urn:swrl#r2"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A143">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+    <owl:oneOf rdf:nodeID="A144"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A145">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:first rdf:nodeID="A89"/>
+    <rdf:rest rdf:nodeID="A66"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya_27">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya"/>
+    <Profil:voisin rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya_29"/>
+    <Profil:voisin rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya_31"/>
+    <Profil:voisin rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya_48"/>
+    <Profil:hasId rdf:datatype="http://www.w3.org/2001/XMLSchema#long">27</Profil:hasId>
+    <Profil:nom_wilaya rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mostaganem</Profil:nom_wilaya>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya_40">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya"/>
+    <Profil:hasId rdf:datatype="http://www.w3.org/2001/XMLSchema#long">40</Profil:hasId>
+    <Profil:nom_wilaya rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Khenchela</Profil:nom_wilaya>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A146">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+    <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#prefCouleur"/>
+    <swrl:argument1 rdf:resource="urn:swrl#r1"/>
+    <swrl:argument2 rdf:resource="urn:swrl#l1"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya_1">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya"/>
+    <Profil:voisin rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya_11"/>
+    <Profil:voisin rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya_32"/>
+    <Profil:voisin rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya_37"/>
+    <Profil:voisin rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya_47"/>
+    <Profil:voisin rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya_8"/>
+    <Profil:hasId rdf:datatype="http://www.w3.org/2001/XMLSchema#long">1</Profil:hasId>
+    <Profil:nom_wilaya rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Adrar</Profil:nom_wilaya>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A62">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+    <swrl:classPredicate rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Shops"/>
+    <swrl:argument1 rdf:resource="urn:swrl#s"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Produit_6">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Produit"/>
+    <Profil:aCouleur rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Couleur_1"/>
+    <Profil:aTendance rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Tendance_1"/>
+    <Profil:appartientAShop rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Shops_7"/>
+    <Profil:hasId rdf:datatype="http://www.w3.org/2001/XMLSchema#long">6</Profil:hasId>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A147">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:first rdf:nodeID="A148"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A116">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:first rdf:nodeID="A149"/>
+    <rdf:rest rdf:nodeID="A150"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya_38">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya"/>
+    <Profil:voisin rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya_44"/>
+    <Profil:voisin rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya_48"/>
+    <Profil:hasId rdf:datatype="http://www.w3.org/2001/XMLSchema#long">38</Profil:hasId>
+    <Profil:nom_wilaya rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tissemsilt</Profil:nom_wilaya>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A151">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:first rdf:nodeID="A133"/>
+    <rdf:rest rdf:nodeID="A122"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Artisane_5">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Artisane"/>
+    <Profil:aDomaine rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Activite_3"/>
+    <Profil:hasId rdf:datatype="http://www.w3.org/2001/XMLSchema#long">5</Profil:hasId>
+    <Profil:lieu_naissance>Alger</Profil:lieu_naissance>
+    <Profil:nom>nom_5</Profil:nom>
+    <Profil:prenom>prenom_5</Profil:prenom>
+    <Profil:sex>Femelle</Profil:sex>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A44">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+    <rdf:first>Elve</rdf:first>
+    <rdf:rest rdf:nodeID="A152"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Personalite_1">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Personalite"/>
+    <Profil:hasId rdf:datatype="http://www.w3.org/2001/XMLSchema#long">1</Profil:hasId>
+    <Profil:nom_personalite rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cooperatrice</Profil:nom_personalite>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#preference_1">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Preference"/>
+    <Profil:prefCouleur rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Couleur_9"/>
+    <Profil:hasId rdf:datatype="http://www.w3.org/2001/XMLSchema#long">1</Profil:hasId>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#User">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A144">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+    <rdf:first>Habits</rdf:first>
+    <rdf:rest rdf:nodeID="A52"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya_28">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya"/>
+    <Profil:voisin rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya_34"/>
+    <Profil:hasId rdf:datatype="http://www.w3.org/2001/XMLSchema#long">28</Profil:hasId>
+    <Profil:nom_wilaya rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Msila</Profil:nom_wilaya>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Produit_7">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Produit"/>
+    <Profil:aCouleur rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Couleur_1"/>
+    <Profil:aTendance rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Tendance_2"/>
+    <Profil:appartientAShop rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Shops_7"/>
+    <Profil:hasId rdf:datatype="http://www.w3.org/2001/XMLSchema#long">7</Profil:hasId>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A153">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:first rdf:nodeID="A134"/>
+    <rdf:rest rdf:nodeID="A145"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A63">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:first rdf:nodeID="A51"/>
+    <rdf:rest rdf:nodeID="A154"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya_10">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya"/>
+    <Profil:voisin rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya_15"/>
+    <Profil:voisin rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya_26"/>
+    <Profil:voisin rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya_28"/>
+    <Profil:voisin rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya_34"/>
+    <Profil:voisin rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya_35"/>
+    <Profil:hasId rdf:datatype="http://www.w3.org/2001/XMLSchema#long">10</Profil:hasId>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A59">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+    <swrl:classPredicate rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Client"/>
+    <swrl:argument1 rdf:resource="urn:swrl#c"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya_2">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya"/>
+    <Profil:voisin rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya_27"/>
+    <Profil:voisin rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya_38"/>
+    <Profil:voisin rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya_42"/>
+    <Profil:voisin rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya_44"/>
+    <Profil:voisin rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya_48"/>
+    <Profil:hasId rdf:datatype="http://www.w3.org/2001/XMLSchema#long">2</Profil:hasId>
+    <Profil:nom_wilaya rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chlef</Profil:nom_wilaya>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A155">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#SameIndividualAtom"/>
+    <swrl:argument1 rdf:resource="urn:swrl#l1"/>
+    <swrl:argument2 rdf:resource="urn:swrl#l2"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Preference_2">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Preference"/>
+    <Profil:prefCouleur rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Couleur_6"/>
+    <Profil:hasId rdf:datatype="http://www.w3.org/2001/XMLSchema#long">2</Profil:hasId>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A156">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+    <swrl:classPredicate rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Couleur"/>
+    <swrl:argument1 rdf:resource="urn:swrl#l2"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#date_naissance">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#User"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A72">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+    <swrl:classPredicate rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Couleur"/>
+    <swrl:argument1 rdf:resource="urn:swrl#l1"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Couleur_9">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Couleur"/>
+    <Profil:couleur rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rouge</Profil:couleur>
+    <Profil:hasId rdf:datatype="http://www.w3.org/2001/XMLSchema#long">9</Profil:hasId>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#CentreInteret_6">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#CentreInteret"/>
+    <Profil:hasId rdf:datatype="http://www.w3.org/2001/XMLSchema#long">6</Profil:hasId>
+    <Profil:interet_libelle rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Patisserie</Profil:interet_libelle>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A70">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:first rdf:nodeID="A157"/>
+    <rdf:rest rdf:nodeID="A158"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#type_prod">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Produit"/>
+    <rdfs:range rdf:nodeID="A143"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A159">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+    <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#aPreference"/>
+    <swrl:argument1 rdf:resource="urn:swrl#c"/>
+    <swrl:argument2 rdf:resource="urn:swrl#r1"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Couleur_8">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Couleur"/>
+    <Profil:couleur rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rose</Profil:couleur>
+    <Profil:hasId rdf:datatype="http://www.w3.org/2001/XMLSchema#long">8</Profil:hasId>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#nom_personalite">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Personalite"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#CentreInteret_5">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#CentreInteret"/>
+    <Profil:hasId rdf:datatype="http://www.w3.org/2001/XMLSchema#long">5</Profil:hasId>
+    <Profil:interet_libelle rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Musique</Profil:interet_libelle>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#CapacitePhysique">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Aptitude"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Activite">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:equivalentClass rdf:nodeID="A160"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A158">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:first rdf:nodeID="A161"/>
+    <rdf:rest rdf:nodeID="A151"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya_29">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya"/>
+    <Profil:voisin rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya_31"/>
+    <Profil:voisin rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya_48"/>
+    <Profil:hasId rdf:datatype="http://www.w3.org/2001/XMLSchema#long">29</Profil:hasId>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Artisane_6">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Artisane"/>
+    <Profil:aDomaine rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Activite_4"/>
+    <Profil:hasId rdf:datatype="http://www.w3.org/2001/XMLSchema#long">6</Profil:hasId>
+    <Profil:lieu_naissance>Alger</Profil:lieu_naissance>
+    <Profil:nom>nom_6</Profil:nom>
+    <Profil:prenom>prenom_6</Profil:prenom>
+    <Profil:sex>Femelle</Profil:sex>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A162">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+    <rdf:first>Moyen</rdf:first>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Couleur_7">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Couleur"/>
+    <Profil:couleur rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Orange</Profil:couleur>
+    <Profil:hasId rdf:datatype="http://www.w3.org/2001/XMLSchema#long">7</Profil:hasId>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A163">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+    <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#domaine_libelle"/>
+    <swrl:argument1 rdf:resource="urn:swrl#d"/>
+    <swrl:argument2 rdf:resource="urn:swrl#val2"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#CentreInteret_4">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#CentreInteret"/>
+    <Profil:hasId rdf:datatype="http://www.w3.org/2001/XMLSchema#long">4</Profil:hasId>
+    <Profil:interet_libelle rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lecture</Profil:interet_libelle>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#appartientADomaine">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Produit"/>
+    <rdfs:range rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Activite"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A67">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+    <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#equal"/>
+    <swrl:arguments rdf:nodeID="A164"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A65">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:first rdf:nodeID="A165"/>
+    <rdf:rest rdf:nodeID="A166"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A157">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+    <swrl:classPredicate rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya"/>
+    <swrl:argument1 rdf:resource="urn:swrl#w1"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A167">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#SameIndividualAtom"/>
+    <swrl:argument1 rdf:resource="urn:swrl#w1"/>
+    <swrl:argument2 rdf:resource="urn:swrl#w2"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#type_diplome">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Diplome"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#prefCouleur">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Preference"/>
+    <rdfs:range rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Couleur"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#aShop">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <owl:inverseOf rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#shopAppartient"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Artisane"/>
+    <rdfs:range rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Shops"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A112">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+    <swrl:classPredicate rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Produit"/>
+    <swrl:argument1 rdf:resource="urn:swrl#p"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A168">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+    <swrl:classPredicate rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Activite"/>
+    <swrl:argument1 rdf:resource="urn:swrl#d"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#aRecommandeWilaya">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Shops"/>
+    <rdfs:range rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Client"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#CentreInteret_3">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#CentreInteret"/>
+    <Profil:hasId rdf:datatype="http://www.w3.org/2001/XMLSchema#long">3</Profil:hasId>
+    <Profil:interet_libelle rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Exposition</Profil:interet_libelle>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A169">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:first rdf:nodeID="A118"/>
+    <rdf:rest rdf:nodeID="A170"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Couleur_6">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Couleur"/>
+    <Profil:couleur rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Noir</Profil:couleur>
+    <Profil:hasId rdf:datatype="http://www.w3.org/2001/XMLSchema#long">6</Profil:hasId>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#aRecommandeProdCoul">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Produit"/>
+    <rdfs:range rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Client"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A106">
+    <rdf:first rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Couleur_3"/>
+    <rdf:rest rdf:nodeID="A5"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A171">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:first rdf:nodeID="A172"/>
+    <rdf:rest rdf:nodeID="A173"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#CentreInteret">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#aPreference">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#User"/>
+    <rdfs:range rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Preference"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A148">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#SameIndividualAtom"/>
+    <swrl:argument1 rdf:resource="urn:swrl#t1"/>
+    <swrl:argument2 rdf:resource="urn:swrl#t2"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A69">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+    <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#voisin"/>
+    <swrl:argument1 rdf:resource="urn:swrl#w1"/>
+    <swrl:argument2 rdf:resource="urn:swrl#w2"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Produit_20">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Produit"/>
+    <Profil:aCouleur rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Couleur_9"/>
+    <Profil:aTendance rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Tendance_2"/>
+    <Profil:appartientAShop rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Shops_9"/>
+    <Profil:hasId rdf:datatype="http://www.w3.org/2001/XMLSchema#long">20</Profil:hasId>
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:swrl#r">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#domaine_libelle">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Activite"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Couleur_5">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Couleur"/>
+    <Profil:couleur rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Marron</Profil:couleur>
+    <Profil:hasId rdf:datatype="http://www.w3.org/2001/XMLSchema#long">5</Profil:hasId>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A174">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+    <swrl:classPredicate rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Produit"/>
+    <swrl:argument1 rdf:resource="urn:swrl#p"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A21">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:first rdf:nodeID="A53"/>
+    <rdf:rest rdf:nodeID="A175"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A17">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+    <swrl:classPredicate rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Preference"/>
+    <swrl:argument1 rdf:resource="urn:swrl#r2"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A176">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:first rdf:nodeID="A177"/>
+    <rdf:rest rdf:nodeID="A46"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A175">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:first rdf:nodeID="A155"/>
+    <rdf:rest rdf:nodeID="A147"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A178">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+    <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#prefTendance"/>
+    <swrl:argument1 rdf:resource="urn:swrl#r"/>
+    <swrl:argument2 rdf:resource="urn:swrl#t2"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:swrl#s">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Couleur_4">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Couleur"/>
+    <Profil:couleur rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jaune</Profil:couleur>
+    <Profil:hasId rdf:datatype="http://www.w3.org/2001/XMLSchema#long">4</Profil:hasId>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#consulteShop">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Client"/>
+    <rdfs:range rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Shops"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A179">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+    <rdf:first>Avancer</rdf:first>
+    <rdf:rest rdf:nodeID="A180"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya_19">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya"/>
+    <Profil:voisin rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya_28"/>
+    <Profil:voisin rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya_34"/>
+    <Profil:voisin rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya_43"/>
+    <Profil:hasId rdf:datatype="http://www.w3.org/2001/XMLSchema#long">19</Profil:hasId>
+    <Profil:nom_wilaya rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Setif</Profil:nom_wilaya>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A73">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:first rdf:nodeID="A31"/>
+    <rdf:rest rdf:nodeID="A54"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A8">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:first rdf:nodeID="A181"/>
+    <rdf:rest rdf:nodeID="A182"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A183">
+    <rdf:first rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Activite_3"/>
+    <rdf:rest rdf:nodeID="A24"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A154">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:first rdf:nodeID="A23"/>
+    <rdf:rest rdf:nodeID="A184"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya_9">
+    <Profil:nom_wilaya rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Blida</Profil:nom_wilaya>
+    <Profil:voisin rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya_42"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <Profil:hasId rdf:datatype="http://www.w3.org/2001/XMLSchema#long">9</Profil:hasId>
+    <Profil:voisin rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya_44"/>
+    <Profil:voisin rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya_35"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya"/>
+    <Profil:voisin rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya_26"/>
+    <Profil:voisin rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya_10"/>
+    <Profil:voisin rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya_16"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#prefTendance">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Preference"/>
+    <rdfs:range rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Tendance"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A165">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+    <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#wilaya_shop"/>
+    <swrl:argument1 rdf:resource="urn:swrl#s"/>
+    <swrl:argument2 rdf:resource="urn:swrl#val2"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:swrl#p">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A138">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:first rdf:nodeID="A163"/>
+    <rdf:rest rdf:nodeID="A90"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A130">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:first rdf:nodeID="A93"/>
+    <rdf:rest rdf:nodeID="A68"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#ville">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#User"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya_18">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya"/>
+    <Profil:voisin rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya_19"/>
+    <Profil:voisin rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya_21"/>
+    <Profil:voisin rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya_25"/>
+    <Profil:voisin rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya_43"/>
+    <Profil:hasId rdf:datatype="http://www.w3.org/2001/XMLSchema#long">18</Profil:hasId>
+    <Profil:nom_wilaya rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jijel</Profil:nom_wilaya>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Couleur_3">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Couleur"/>
+    <Profil:couleur rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gris</Profil:couleur>
+    <Profil:hasId rdf:datatype="http://www.w3.org/2001/XMLSchema#long">3</Profil:hasId>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A140">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:first rdf:nodeID="A174"/>
+    <rdf:rest rdf:nodeID="A185"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A186">
+    <rdf:first rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Couleur_7"/>
+    <rdf:rest rdf:nodeID="A187"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#voisin">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya"/>
+    <rdfs:range rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A182">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:first rdf:nodeID="A168"/>
+    <rdf:rest rdf:nodeID="A45"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A188">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+    <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#aRecommandeWilaya"/>
+    <swrl:argument1 rdf:resource="urn:swrl#s"/>
+    <swrl:argument2 rdf:resource="urn:swrl#c"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A39">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:first rdf:nodeID="A107"/>
+    <rdf:rest rdf:nodeID="A176"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A83">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+    <swrl:classPredicate rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Produit"/>
+    <swrl:argument1 rdf:resource="urn:swrl#p"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A161">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+    <swrl:classPredicate rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya"/>
+    <swrl:argument1 rdf:resource="urn:swrl#w2"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Produit_10">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Produit"/>
+    <Profil:aCouleur rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Couleur_9"/>
+    <Profil:aTendance rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Tendance_2"/>
+    <Profil:appartientAShop rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Shops_7"/>
+    <Profil:hasId rdf:datatype="http://www.w3.org/2001/XMLSchema#long">10</Profil:hasId>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A189">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+    <swrl:classPredicate rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Activite"/>
+    <swrl:argument1 rdf:resource="urn:swrl#d"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#CentreInteret_7">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <Profil:hasId rdf:datatype="http://www.w3.org/2001/XMLSchema#long">7</Profil:hasId>
+    <Profil:interet_libelle rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Couture</Profil:interet_libelle>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#niveau_langue_parler">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Langue"/>
+    <rdfs:range rdf:nodeID="A190"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Tag">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A132">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+    <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#aRecommandeProdTend"/>
+    <swrl:argument1 rdf:resource="urn:swrl#p"/>
+    <swrl:argument2 rdf:resource="urn:swrl#c"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A142">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+    <rdf:first>Male</rdf:first>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Couleur_2">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Couleur"/>
+    <Profil:couleur rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bleu</Profil:couleur>
+    <Profil:hasId rdf:datatype="http://www.w3.org/2001/XMLSchema#long">2</Profil:hasId>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya_17">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya"/>
+    <Profil:voisin rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya_26"/>
+    <Profil:voisin rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya_28"/>
+    <Profil:voisin rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya_30"/>
+    <Profil:voisin rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya_38"/>
+    <Profil:voisin rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya_47"/>
+    <Profil:hasId rdf:datatype="http://www.w3.org/2001/XMLSchema#long">17</Profil:hasId>
+    <Profil:nom_wilaya rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Djelfa</Profil:nom_wilaya>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#date">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A129">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+    <swrl:classPredicate rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Client"/>
+    <swrl:argument1 rdf:resource="urn:swrl#c"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A191">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+    <swrl:body rdf:nodeID="A128"/>
+    <swrl:head rdf:nodeID="A192"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A181">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+    <swrl:classPredicate rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Produit"/>
+    <swrl:argument1 rdf:resource="urn:swrl#p"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A180">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+    <rdf:first>Elve</rdf:first>
+    <rdf:rest rdf:nodeID="A193"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A79">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+    <swrl:classPredicate rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Shops"/>
+    <swrl:argument1 rdf:resource="urn:swrl#s"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#aCouleur">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Produit"/>
+    <rdfs:range rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Couleur"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Produit_11">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Produit"/>
+    <Profil:aCouleur rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Couleur_6"/>
+    <Profil:aTendance rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Tendance_1"/>
+    <Profil:appartientAShop rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Shops_3"/>
+    <Profil:hasId rdf:datatype="http://www.w3.org/2001/XMLSchema#long">11</Profil:hasId>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A184">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:first rdf:nodeID="A194"/>
+    <rdf:rest rdf:nodeID="A195"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Produit_12">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Produit"/>
+    <Profil:aCouleur rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Couleur_6"/>
+    <Profil:aTendance rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Tendance_2"/>
+    <Profil:appartientAShop rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Shops_3"/>
+    <Profil:hasId rdf:datatype="http://www.w3.org/2001/XMLSchema#long">12</Profil:hasId>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A196">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:first rdf:nodeID="A94"/>
+    <rdf:rest rdf:nodeID="A153"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A195">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:first rdf:nodeID="A159"/>
+    <rdf:rest rdf:nodeID="A169"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A197">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+    <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#appartientADomaine"/>
+    <swrl:argument1 rdf:resource="urn:swrl#p"/>
+    <swrl:argument2 rdf:resource="urn:swrl#d"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:swrl#r2">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A166">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:first rdf:nodeID="A49"/>
+    <rdf:rest rdf:nodeID="A198"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A190">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+    <owl:oneOf rdf:nodeID="A199"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#ville_shop">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Shops"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#CapaciteSensorielle">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#CapacitePhysique"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A200">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+    <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#prefTendance"/>
+    <swrl:argument1 rdf:resource="urn:swrl#r2"/>
+    <swrl:argument2 rdf:resource="urn:swrl#t1"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A201">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+    <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#aDomaine"/>
+    <swrl:argument1 rdf:resource="urn:swrl#a"/>
+    <swrl:argument2 rdf:resource="urn:swrl#d"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A202">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:first rdf:nodeID="A197"/>
+    <rdf:rest rdf:nodeID="A77"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A203">
+    <rdf:first rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Couleur_11"/>
+    <rdf:rest rdf:nodeID="A105"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A34">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:first rdf:nodeID="A81"/>
+    <rdf:rest rdf:nodeID="A88"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#CapaciteMotrice">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#CapacitePhysique"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A47">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:first rdf:nodeID="A178"/>
+    <rdf:rest rdf:nodeID="A204"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A150">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:first rdf:nodeID="A205"/>
+    <rdf:rest rdf:nodeID="A196"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#aRecommandeLocalProche">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Shops"/>
+    <rdfs:range rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Client"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Produit_13">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Produit"/>
+    <Profil:aCouleur rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Couleur_2"/>
+    <Profil:aTendance rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Tendance_1"/>
+    <Profil:appartientAShop rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Shops_3"/>
+    <Profil:hasId rdf:datatype="http://www.w3.org/2001/XMLSchema#long">13</Profil:hasId>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A205">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+    <swrl:classPredicate rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Shops"/>
+    <swrl:argument1 rdf:resource="urn:swrl#s"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A194">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+    <swrl:classPredicate rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Preference"/>
+    <swrl:argument1 rdf:resource="urn:swrl#r1"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A84">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+    <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#aRecommandeLocal"/>
+    <swrl:argument1 rdf:resource="urn:swrl#s"/>
+    <swrl:argument2 rdf:resource="urn:swrl#c"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A206">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:first rdf:nodeID="A207"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A113">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:first rdf:nodeID="A208"/>
+    <rdf:rest rdf:nodeID="A26"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#shopAppartient">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Shops"/>
+    <rdfs:range rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Artisane"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#description_diplome">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Diplome"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A38">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+    <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#aPreference"/>
+    <swrl:argument1 rdf:resource="urn:swrl#c"/>
+    <swrl:argument2 rdf:resource="urn:swrl#r"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A209">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:first rdf:nodeID="A201"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A58">
+    <rdf:first rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Tendance_2"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A204">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:first rdf:nodeID="A41"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A177">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+    <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#aTendance"/>
+    <swrl:argument1 rdf:resource="urn:swrl#p"/>
+    <swrl:argument2 rdf:resource="urn:swrl#t1"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A173">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:first rdf:nodeID="A210"/>
+    <rdf:rest rdf:nodeID="A211"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A212">
+    <rdf:first rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Couleur_6"/>
+    <rdf:rest rdf:nodeID="A186"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A164">
+    <rdf:first rdf:resource="urn:swrl#val"/>
+    <rdf:rest rdf:nodeID="A213"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Produit">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Produit_14">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Produit"/>
+    <Profil:aCouleur rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Couleur_2"/>
+    <Profil:aTendance rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Tendance_2"/>
+    <Profil:appartientAShop rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Shops_3"/>
+    <Profil:hasId rdf:datatype="http://www.w3.org/2001/XMLSchema#long">14</Profil:hasId>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A185">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:first rdf:nodeID="A189"/>
+    <rdf:rest rdf:nodeID="A202"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A135">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+    <swrl:classPredicate rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Tendance"/>
+    <swrl:argument1 rdf:resource="urn:swrl#t1"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A214">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+    <owl:oneOf rdf:nodeID="A35"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A215">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+    <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#vivreAu"/>
+    <swrl:argument1 rdf:resource="urn:swrl#c"/>
+    <swrl:argument2 rdf:resource="urn:swrl#w1"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:swrl#d">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#utilseTagUser">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#utiliseTag"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#User"/>
+    <rdfs:range rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#TagUtilisateur"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#aInteret">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#User"/>
+    <rdfs:range rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#CentreInteret"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Couleur_10">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Couleur"/>
+    <Profil:couleur rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vert</Profil:couleur>
+    <Profil:hasId rdf:datatype="http://www.w3.org/2001/XMLSchema#long">10</Profil:hasId>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A216">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+    <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#prefCouleur"/>
+    <swrl:argument1 rdf:resource="urn:swrl#r"/>
+    <swrl:argument2 rdf:resource="urn:swrl#l2"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A193">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+    <rdf:first>Faible</rdf:first>
+    <rdf:rest rdf:nodeID="A217"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A218">
+    <rdf:first rdf:resource="urn:swrl#val2"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#hasId">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#long"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A213">
+    <rdf:first rdf:resource="urn:swrl#val2"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A172">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+    <swrl:classPredicate rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya"/>
+    <swrl:argument1 rdf:resource="urn:swrl#w1"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Produit_15">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Produit"/>
+    <Profil:aCouleur rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Couleur_9"/>
+    <Profil:aTendance rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Tendance_1"/>
+    <Profil:appartientAShop rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Shops_3"/>
+    <Profil:hasId rdf:datatype="http://www.w3.org/2001/XMLSchema#long">15</Profil:hasId>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A187">
+    <rdf:first rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Couleur_8"/>
+    <rdf:rest rdf:nodeID="A219"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A6">
+    <rdf:first rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Couleur_5"/>
+    <rdf:rest rdf:nodeID="A212"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A149">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+    <swrl:classPredicate rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Artisane"/>
+    <swrl:argument1 rdf:resource="urn:swrl#a"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A20">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+    <swrl:classPredicate rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Tendance"/>
+    <swrl:argument1 rdf:resource="urn:swrl#t2"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A198">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:first rdf:nodeID="A104"/>
+    <rdf:rest rdf:nodeID="A220"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Couleur_11">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Couleur"/>
+    <Profil:couleur rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Violet</Profil:couleur>
+    <Profil:hasId rdf:datatype="http://www.w3.org/2001/XMLSchema#long">11</Profil:hasId>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A210">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+    <swrl:classPredicate rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya"/>
+    <swrl:argument1 rdf:resource="urn:swrl#w2"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A221">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:first rdf:nodeID="A156"/>
+    <rdf:rest rdf:nodeID="A29"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A217">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+    <rdf:first>Moyen</rdf:first>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#aAptitude">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A222">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:first rdf:nodeID="A85"/>
+    <rdf:rest rdf:nodeID="A206"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#motif_prod">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Produit"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A119">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:first rdf:nodeID="A223"/>
+    <rdf:rest rdf:nodeID="A209"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#adresse">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#User"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A80">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:first rdf:nodeID="A167"/>
+    <rdf:rest rdf:nodeID="A171"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A86">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+    <owl:oneOf rdf:nodeID="A179"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A219">
+    <rdf:first rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Couleur_9"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Produit_16">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Produit"/>
+    <Profil:aTendance rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Tendance_1"/>
+    <Profil:appartientAShop rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Shops_2"/>
+    <Profil:hasId rdf:datatype="http://www.w3.org/2001/XMLSchema#long">16</Profil:hasId>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Activite_5">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Activite"/>
+    <Profil:domaine_libelle rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Poterie</Profil:domaine_libelle>
+    <Profil:hasId rdf:datatype="http://www.w3.org/2001/XMLSchema#long">5</Profil:hasId>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A224">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+    <swrl:body rdf:nodeID="A64"/>
+    <swrl:head rdf:nodeID="A225"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#aDomaine">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Artisane"/>
+    <rdfs:range rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Activite"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A192">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:first rdf:nodeID="A226"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#interet_poid">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#CentreInteret"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#CentreInteret_2">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#CentreInteret"/>
+    <Profil:hasId rdf:datatype="http://www.w3.org/2001/XMLSchema#long">2</Profil:hasId>
+    <Profil:interet_libelle rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Collaboration</Profil:interet_libelle>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A227">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#SameIndividualAtom"/>
+    <swrl:argument1 rdf:resource="urn:swrl#l1"/>
+    <swrl:argument2 rdf:resource="urn:swrl#l2"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A211">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:first rdf:nodeID="A215"/>
+    <rdf:rest rdf:nodeID="A100"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A223">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+    <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#shopAppartient"/>
+    <swrl:argument1 rdf:resource="urn:swrl#s"/>
+    <swrl:argument2 rdf:resource="urn:swrl#a"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A220">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:first rdf:nodeID="A27"/>
+    <rdf:rest rdf:nodeID="A222"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A170">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:first rdf:nodeID="A146"/>
+    <rdf:rest rdf:nodeID="A16"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Produit_17">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Produit"/>
+    <Profil:aTendance rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Tendance_2"/>
+    <Profil:appartientAShop rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Shops_2"/>
+    <Profil:hasId rdf:datatype="http://www.w3.org/2001/XMLSchema#long">17</Profil:hasId>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Activite_4">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Activite"/>
+    <Profil:domaine_libelle rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Patisserie</Profil:domaine_libelle>
+    <Profil:hasId rdf:datatype="http://www.w3.org/2001/XMLSchema#long">4</Profil:hasId>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A228">
+    <rdf:first rdf:resource="urn:swrl#val1"/>
+    <rdf:rest rdf:nodeID="A218"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A226">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+    <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#aRecommandeLocalProche"/>
+    <swrl:argument1 rdf:resource="urn:swrl#s"/>
+    <swrl:argument2 rdf:resource="urn:swrl#c"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#CentreInteret_1">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#CentreInteret"/>
+    <Profil:hasId rdf:datatype="http://www.w3.org/2001/XMLSchema#long">1</Profil:hasId>
+    <Profil:interet_libelle rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Apprentissage</Profil:interet_libelle>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A56">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:first rdf:nodeID="A216"/>
+    <rdf:rest rdf:nodeID="A229"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A136">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:first rdf:nodeID="A200"/>
+    <rdf:rest rdf:nodeID="A221"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A123">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+    <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#seLocaliseA"/>
+    <swrl:argument1 rdf:resource="urn:swrl#s"/>
+    <swrl:argument2 rdf:resource="urn:swrl#w2"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#achete">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <owl:inverseOf rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#acheterPar"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Client"/>
+    <rdfs:range rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Produit"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A91">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+    <swrl:classPredicate rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Activite"/>
+    <swrl:argument1 rdf:resource="urn:swrl#d"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A207">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+    <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#equal"/>
+    <swrl:arguments rdf:nodeID="A228"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Activite_3">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Activite"/>
+    <Profil:domaine_libelle rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Couture</Profil:domaine_libelle>
+    <Profil:hasId rdf:datatype="http://www.w3.org/2001/XMLSchema#long">3</Profil:hasId>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#aCapaciteMotrice">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#aCapacitePhysique"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#User"/>
+    <rdfs:range rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#CapaciteMotrice"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#prix">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Produit"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#interet_libelle">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#CentreInteret"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A160">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:oneOf rdf:nodeID="A183"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#aTendance">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Produit"/>
+    <rdfs:range rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Tendance"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Produit_18">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Produit"/>
+    <Profil:aCouleur rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Couleur_10"/>
+    <Profil:aTendance rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Tendance_1"/>
+    <Profil:appartientAShop rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Shops_5"/>
+    <Profil:hasId rdf:datatype="http://www.w3.org/2001/XMLSchema#long">18</Profil:hasId>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A230">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+    <rdf:first>Elve</rdf:first>
+    <rdf:rest rdf:nodeID="A231"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#aLangue">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#aCompetence"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#User"/>
+    <rdfs:range rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Langue"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Produit_38">
+    <rdf:type rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Produit"/>
+    <Profil:appartientAShop rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Shops_1"/>
+    <Profil:aCouleur rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Couleur_6"/>
+    <Profil:aTendance rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Tendance_1"/>
+    <Profil:hasId rdf:datatype="http://www.w3.org/2001/XMLSchema#long">38</Profil:hasId>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A199">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+    <rdf:first>Avancer</rdf:first>
+    <rdf:rest rdf:nodeID="A230"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A1">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:oneOf rdf:nodeID="A57"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A115">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+    <swrl:classPredicate rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Client"/>
+    <swrl:argument1 rdf:resource="urn:swrl#c"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A95">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+    <swrl:classPredicate rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Preference"/>
+    <swrl:argument1 rdf:resource="urn:swrl#r"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#aRecommandeProdTend">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Produit"/>
+    <rdfs:range rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Client"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#tendance">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Tendance"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#aCapacitePhysique">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#aAptitude"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#User"/>
+    <rdfs:range rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#CapacitePhysique"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A87">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+    <owl:oneOf rdf:nodeID="A141"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A152">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+    <rdf:first>Faible</rdf:first>
+    <rdf:rest rdf:nodeID="A162"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:swrl#r1">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A225">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:first rdf:nodeID="A188"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Produit_19">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Produit"/>
+    <Profil:aCouleur rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Couleur_9"/>
+    <Profil:aTendance rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Tendance_1"/>
+    <Profil:appartientAShop rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Shops_6"/>
+    <Profil:hasId rdf:datatype="http://www.w3.org/2001/XMLSchema#long">19</Profil:hasId>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#aCompetence">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#User"/>
+    <rdfs:range rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Competence"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:swrl#i">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A231">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+    <rdf:first>Faible</rdf:first>
+    <rdf:rest rdf:nodeID="A108"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#acheterPar">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Produit"/>
+    <rdfs:range rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Client"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Artisane_100">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Artisane"/>
+    <Profil:aDomaine rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Activite_3"/>
+    <Profil:vivreAu rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Wilaya_2"/>
+    <Profil:hasId rdf:datatype="http://www.w3.org/2001/XMLSchema#long">100</Profil:hasId>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A208">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+    <swrl:classPredicate rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Shops"/>
+    <swrl:argument1 rdf:resource="urn:swrl#s"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#couleur">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Couleur"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#niveau_langue_lecture">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Langue"/>
+    <rdfs:range rdf:nodeID="A214"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A97">
+    <rdf:first rdf:resource="http://www.semanticweb.org/islam/ontologies/2018/0/Profil#Couleur_10"/>
+    <rdf:rest rdf:nodeID="A203"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A229">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:first rdf:nodeID="A227"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+</rdf:RDF>

@@ -1,0 +1,22 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+     xmlns:h="http://java.sun.com/jsf/html">
+      
+<ui:composition>
+	
+	<h:link value="&lt;&lt;" disabled="#{!pager.hasLess()}" outcome="#{backingBean[action]}" >
+		 <ui:insert />
+		 <f:param name="page" value="#{pager.getCurrentPage() - 1}"/>
+	</h:link>
+	<h:link value="&gt;&gt;" disabled="#{!pager.hasMore()}" outcome="#{backingBean[action]}" >
+		 <ui:insert />
+		 <f:param name="page" value="#{pager.getCurrentPage() + 1}"/>
+	</h:link>
+
+</ui:composition>
+
+</html>

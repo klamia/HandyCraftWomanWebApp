@@ -1,0 +1,68 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:b="http://bootsfaces.net/ui">
+
+<h:head>
+	<ui:insert name="meta">
+		<meta name="viewport" content="width=device-width, initial-scale=1"
+			http-equiv="content-type" />
+	</ui:insert>
+
+	<title><ui:insert name="title">
+			<h:outputText value="#{messages['title']}" />
+		</ui:insert></title>
+	<link rel="stylesheet" type="text/css"
+		href="#{facesContext.externalContext.requestContextPath}/css/bootstrap.min.css" />
+	<link rel="stylesheet" type="text/css"
+		href="#{facesContext.externalContext.requestContextPath}/css/layout.css" />
+	<link rel="stylesheet" type="text/css"
+		href="#{facesContext.externalContext.requestContextPath}/css/main.css" />
+    <link rel="stylesheet" type="text/css"
+		href="#{facesContext.externalContext.requestContextPath}/css/artisane/style.css" />
+
+    
+</h:head>
+
+<h:body>
+	<ui:insert name="header">
+        <ui:include 
+		src="/WEB-INF/templates/artisane/headerArtisane.xhtml">
+		</ui:include>
+	</ui:insert>
+
+	<div class="cleaner"></div>
+
+	<b:container fluid="true">
+		<b:row >
+		
+			<b:column span="2">
+				
+				<ui:insert name="navigation">
+					<ui:include src="../navigation.xhtml" />
+				</ui:insert>
+			</b:column>
+			<b:column span="8">
+				<ui:insert name="content">Content</ui:insert>
+			</b:column>
+			<b:column span="2">
+				<ui:insert name="adv">
+					<ui:include src="../adv.xhtml" />
+				</ui:insert>
+			</b:column>
+		</b:row>
+	</b:container>
+	<ui:insert name="footer">
+		<ui:include src="../footer.xhtml" />
+	</ui:insert>
+
+	<div id="footer_botom">
+		<div class="right"></div>
+	</div>
+
+</h:body>
+
+</html>

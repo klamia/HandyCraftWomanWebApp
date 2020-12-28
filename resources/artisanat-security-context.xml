@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans:beans xmlns="http://www.springframework.org/schema/security"
+	xmlns:beans="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:lang="http://www.springframework.org/schema/lang"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+		http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
+    	http://www.springframework.org/schema/security 
+		http://www.springframework.org/schema/security/spring-security-3.1.xsd
+      	http://www.springframework.org/schema/context 
+      	http://www.springframework.org/schema/context/spring-context-3.1.xsd">
+      	
+   
+	<http auto-config="true"   >
+	
+		<intercept-url pattern="/index.xhtml*" access="IS_AUTHENTICATED_ANONYMOUSLY,ROLE_ADMIN,ROLE_ARTISANE,ROLE_FOURNISSEUR,ROLE_CLIENT"  />
+		<intercept-url pattern="/shops.xhtml*" access="IS_AUTHENTICATED_ANONYMOUSLY,ROLE_ADMIN,ROLE_ARTISANE,ROLE_FOURNISSEUR,ROLE_CLIENT"  />
+		<intercept-url pattern="/userLogin.xhtml*" access="IS_AUTHENTICATED_ANONYMOUSLY,ROLE_ADMIN,ROLE_ARTISANE,ROLE_FOURNISSEUR,ROLE_CLIENT"  />
+	    <intercept-url pattern="/login.xhtml*" access="IS_AUTHENTICATED_ANONYMOUSLY,ROLE_ADMIN,ROLE_ARTISANE,ROLE_FOURNISSEUR,ROLE_CLIENT"  />
+	    <intercept-url pattern="/WEB-INF/**" access="IS_AUTHENTICATED_ANONYMOUSLY,ROLE_ADMIN,ROLE_ARTISANE,ROLE_FOURNISSEUR,ROLE_CLIENT" />
+		<intercept-url pattern="/css/**" access="IS_AUTHENTICATED_ANONYMOUSLY,ROLE_ADMIN,ROLE_ARTISANE,ROLE_FOURNISSEUR,ROLE_CLIENT" />
+		<intercept-url pattern="/images/**" access="IS_AUTHENTICATED_ANONYMOUSLY,ROLE_ADMIN,ROLE_ARTISANE,ROLE_FOURNISSEUR,ROLE_CLIENT" />
+		<intercept-url pattern="/js/**" access="IS_AUTHENTICATED_ANONYMOUSLY,ROLE_ADMIN,ROLE_ARTISANE,ROLE_FOURNISSEUR,ROLE_CLIENT" />
+		<intercept-url pattern="/img/**" access="IS_AUTHENTICATED_ANONYMOUSLY,ROLE_ADMIN,ROLE_ARTISANE,ROLE_FOURNISSEUR,ROLE_CLIENT" />
+		<intercept-url pattern="/pics/**" access="IS_AUTHENTICATED_ANONYMOUSLY,ROLE_ADMIN,ROLE_ARTISANE,ROLE_FOURNISSEUR,ROLE_CLIENT" />
+		<intercept-url pattern="/sample-pictures/**" access="IS_AUTHENTICATED_ANONYMOUSLY,ROLE_ADMIN,ROLE_ARTISANE,ROLE_FOURNISSEUR,ROLE_CLIENT" />
+		<intercept-url pattern="/denied.xhtml*" access="IS_AUTHENTICATED_ANONYMOUSLY,ROLE_ADMIN,ROLE_ARTISANE,ROLE_FOURNISSEUR,ROLE_CLIENT" />
+		<intercept-url pattern="/userType.xhtml*" access="IS_AUTHENTICATED_ANONYMOUSLY,ROLE_ADMIN,ROLE_ARTISANE,ROLE_FOURNISSEUR,ROLE_CLIENT" />
+		<intercept-url pattern="/artisane/**" access="ROLE_ADMIN,ROLE_ARTISANE" />
+		<intercept-url pattern="/client/**" access="ROLE_ADMIN,ROLE_CLIENT" />
+		<intercept-url pattern="/pages/**" access="ROLE_ADMIN,ROLE_ARTISANE,ROLE_FOURNISSEUR,ROLE_CLIENT" />
+		<intercept-url pattern="/content/**" access="IS_AUTHENTICATED_ANONYMOUSLY,ROLE_ADMIN,ROLE_ARTISANE,ROLE_FOURNISSEUR,ROLE_CLIENT" />
+		
+		<form-login login-page="/login.xhtml"
+			authentication-failure-url="/login.xhtml?login_error=true"
+			 authentication-success-handler-ref="myAuthenticationSuccessHandler" />
+			
+        
+		<logout logout-success-url="/login.xhtml"  delete-cookies="JSESSIONID" />
+		<access-denied-handler error-page="/denied.xhtml"/>
+		
+		
+		
+	</http>
+	  
+	<beans:bean id="myAuthenticationSuccessHandler" 
+	class="dz.com.cerist.artisanat.security.MySimpleUrlAuthenticationSuccessHandler" />
+	
+	<beans:bean id="dataSource"
+		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+		<beans:property name="driverClassName"
+			value="${Mysql_driver.connection.driver_class}" />
+		<beans:property name="username" value="${Mysql_driver.connection.username}" />
+		<beans:property name="password" value="${Mysql_driver.connection.password}" />
+		<beans:property name="url" value="${Mysql_driver.connection.url}" />
+
+	</beans:bean>
+	<!--
+	<beans:bean
+		class="org.springframework.security.authentication.encoding.ShaPasswordEncoder"
+		id="passwordEncoder">
+	</beans:bean>
+	
+	<beans:bean id="databasePasswordSecurerBean"
+		class="dz.com.naftal.petrocard.security.DatabasePasswordSecurerBean"
+		init-method="encryptDBPassword" depends-on="dataSource">
+		<beans:property name="passwordEncoder" ref="passwordEncoder"></beans:property>
+		<beans:property name="dataSource" ref="dataSource"></beans:property>
+		<beans:property name="selectQuery">
+			<beans:value>SELECT username , password , enabled FROM
+				petrocard.users
+			</beans:value>
+		</beans:property>
+		<beans:property name="updateQuery">
+			<beans:value>UPDATE petrocard.users SET password = ? WHERE username = ?
+			</beans:value>
+		</beans:property>
+
+	</beans:bean> -->
+	
+	<authentication-manager>
+		<authentication-provider>
+			<!--<password-encoder hash="sha" ref="passwordEncoder"></password-encoder> -->
+				<jdbc-user-service data-source-ref="Mysql_driverDS"
+					 
+					
+				   users-by-username-query="
+					select username, password, enabled 
+					from artisanat.comptes c where username=? and enabled=1"
+					
+					authorities-by-username-query="
+					SELECT c.username, r.intitule_role FROM artisanat.comptes c JOIN artisanat.roles r on c.roleId = r.code_role WHERE c.username = ?  " />
+				
+				
+					 
+		</authentication-provider>
+	</authentication-manager>   	
+
+     
+
+
+</beans:beans>

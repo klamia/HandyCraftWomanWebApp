@@ -1,0 +1,263 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:p="http://primefaces.org/ui"
+     xmlns:ui="http://java.sun.com/jsf/facelets"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:f="http://java.sun.com/jsf/core">
+
+<h:head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<link type="text/css" rel="stylesheet" href="#{request.contextPath}/css/template4Principale4.css" /> 
+</h:head>
+<h:body>
+
+
+      
+<h:form id="AjoutP"  prependId="false" >
+	      <h2 class="titreTable">Gestion Des Produits</h2>
+		<p:toolbar id="toolbarId"  styleClass="toolbarStyleContenu">
+        <p:toolbarGroup align="left">
+		  <p:commandButton value="Ajouter Produit"  id="ajoutPR" resetValues="true"  action="#{produitBean.addProduit}"  update=":FormCreationProduit:editP"   icon="fa fa-fw fa-plus" styleClass="buttonClass" 
+		  oncomplete="PF('prodAjout').show();"  />
+		 
+		 </p:toolbarGroup>  
+		<p:toolbarGroup align="right">
+          
+          
+        </p:toolbarGroup> 
+        </p:toolbar>
+</h:form>
+    
+<h:form id="ListeProduit" prependId="false" >
+         
+            <p:growl id="growl" showDetail="true" sticky="false" life="3000" />
+            <p:dataTable var="produit" value="#{produitBean.listproduitsArtisane}" id="tableProduit" styleClass="table2" widgetVar="ProduitTable"  border="0" cellpadding="0" cellspacing="0"
+                         emptyMessage="Aucun produit a afficher" paginator="true" rows="4" paginatorTemplate="{CurrentPageReport}  {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink} {RowsPerPageDropdown}"
+                          paginatorPosition="bottom" filteredValue="#{produitBean.filteredProduits}" >
+ 
+                <f:facet name="header" >
+                <p class="tableheader"> <span>Liste Des Produits</span></p>
+                <h:outputText value="Rechercher:" style="margin-left: 580px;" />
+                <p:spacer width="20" height="20" />
+                 <p:inputText id="globalFilter" onkeyup="PF('ProduitTable').filter()" placeholder="nom produit" style="width:150px; background: white !important; float:right; " />
+                <p:spacer width="10" height="10" />
+                </f:facet>
+           
+                 <p:column >
+                     <p:commandButton id="apercuPr"   icon="fa fa-fw fa-hand-o-right"  
+                         action="#{produitBean.checkProduit(produit)}" update="display3" oncomplete="PF('produitApercu').show();"  title="Aperçu"/>
+                      <p:spacer width="5" height="1" />
+                    
+                    <p:commandButton id="editPr"   icon="fa fa-fw fa-edit"  
+                    action="#{produitBean.editProduit(produit)}" update="displaye" oncomplete="PF('prodEdit').show();"  title="Modifier" />
+                        
+            
+                    <p:spacer width="5" height="1" />
+                    <p:commandButton id="sharePr"   icon="fa fa-fw fa-share"  
+                    actionListener="#{produitBean.publishProduit(produit)}"  action="#{produitBean.publie_nonPublie_produit}"
+                    update=":ListeProduit:growl, :ListeProduit:tableProduit"  title="Publier/Non"/>
+                    
+                    <p:spacer width="5" height="1" />
+                    <p:commandButton id="deletePr"   icon="fa fa-fw fa-trash"  
+                    actionListener="#{produitBean.deleteProduit(produit)}" action="#{produitBean.supprimerProduit}"   update=":ListeProduit:growl, :ListeProduit:tableProduit"   title="Supprimer" >
+                       <p:confirm header="Confirmation de Suppression" 
+                       message="Voulez vous vraiment supprimer ce produit?" 
+                       icon="ui-icon-alert"/>
+                     </p:commandButton>
+                     <p:confirmDialog global="true" showEffect="fade" hideEffect="explode">
+                          <p:commandButton title="GDelYesButton" value="Yes" styleClass="ui-confirmdialog-yes"/>
+                          <p:commandButton title="GDelNoButton" value="No" styleClass="ui-confirmdialog-no" />
+                     </p:confirmDialog>
+               </p:column>
+                    
+                             
+                <p:column headerText="Nom"  filterMatchMode="contains"  filterBy="#{produit.nomProduit}" filterStyle="display:none" >
+                    <h:outputText value="#{produit.nomProduit}"/>
+                </p:column>
+                
+               
+                <p:column headerText="Catégorie"  >
+                    <h:outputText value="#{produit.categorie}" />
+                </p:column>
+                
+                
+                 <p:column headerText="Etat"  >
+                    <h:outputText value="#{produit.etat}" />
+                </p:column>   
+        
+                </p:dataTable>
+</h:form>   
+
+<h:form id="FormCreationProduit" >  
+        <p:growl id="growl" showDetail="true" sticky="false" life="3000" />
+        <p:dialog id="editP" header="Création Produit" widgetVar="prodAjout" resizable="false" modal="true" dynamic="true">
+           
+				<h:panelGrid id="display" columns="3" cellpadding="5">
+					
+					<h:outputLabel for="nom" title="Nom Produit" value="Nom:"
+						style="color: #336699; font-weight:bold;" />
+					<p:inputText value="#{produitBean.produit.nomProduit}" id="nom" label="nom" required="true" requiredMessage="Vous devez saisir un nom de produit" />
+                    <p:message id="nomMessage" for="nom" />
+					
+					                     
+                    <h:outputLabel for="descript" value="Descripion:" title="Descripion Produit" style="color: #336699; font-weight:bold; width:80px !important;" />
+                    <p:inputText id="descript" value="#{produitBean.produit.descProduit}" />
+                    <p:message id="descriptMessage" for="descript" />
+					
+					<h:outputText style="color: #336699; font-weight:bold;" value="Catégorie:" /> 
+                    <p:selectOneMenu id="categorieid"    
+                    required="true" requiredMessage="Vous devez selectionner une catégorie" 
+                    value="#{produitBean.produit.categorie}" 
+						panelStyle="width:150px" effect="fade" style="width:160px" >
+					   <f:selectItem itemLabel="Select One" itemValue="#{null}"/>
+                       <f:selectItem itemLabel="Vetements classique" itemValue="Vetements classique" />
+                       <f:selectItem itemLabel="Vetements traditionnels" itemValue="Vetements traditionnels" />     
+                    </p:selectOneMenu>
+                    <p:message id="catMessage" for="categorieid" />
+                    
+					<h:outputLabel for="prix" value="Prix:" title="Prix Produit" style="color: #336699; font-weight:bold; width:80px !important;" />
+                    <p:inputText id="prix" value="#{produitBean.produit.prixProduit}" />
+                    <p:message id="prixMessage" for="prix" />
+	               
+	                <h:outputLabel for="imag" value="Image:" title="Image Produit" style="color: #336699; font-weight:bold; width:80px !important;  " />
+	               <h:form id="imageForm" enctype="multipart/form-data">
+                   
+                    <p:fileUpload id="imag" allowTypes="/(\.|\/)(gif|jpe?g|png)$/"
+                     fileUploadListener="#{produitBean.handleFileUpload}"  /> 
+                    <p:spacer/>
+                   
+                   </h:form>
+	              <p:message id="imageMessage" for=":imageForm:imag" />
+	               
+	               </h:panelGrid>
+                
+                 <br/>
+                   <br/>
+                   
+					<f:facet  name="footer">
+						
+						<p:commandButton value="Enregistrer" update="growl, tableProduit "  action="#{produitBean.ajoutProduit}" oncomplete="PF('prodAjout').hide();"  />
+						
+						<p:commandButton value="Annuler" update="editP" style="float: right;"  process="@none" actionListener="#{produitBean.reset}" />
+					   
+					</f:facet>
+                    	
+			</p:dialog>
+
+ </h:form>
+<h:form id="FormEditionProduit" prependId="false"> 
+        <p:dialog header="Modification du Produit" widgetVar="prodEdit" resizable="false" id="editProd" modal="true" dynamic="true" >
+                <p:growl id="growl2" showDetail="true" sticky="false" life="1000"/>
+                <h:panelGrid id="displaye" columns="3" cellpadding="4" style="margin:0 auto;">
+ 
+                    <h:outputLabel for="nom" title="Nom Produit" value="Nom:"
+						style="color: #336699; font-weight:bold;" />
+					<p:inputText value="#{produitBean.editedProduit.nomProduit}"   id="nom" label="nom" required="true" requiredMessage="Vous devez saisir un nom de produit" />
+                    <p:message id="nomMessage" for="nom" />
+					
+					                     
+                    <h:outputLabel for="descript" value="Descripion:" title="Descripion Produit" style="color: #336699; font-weight:bold; width:80px !important;" />
+                    <p:inputText id="descript" value="#{produitBean.editedProduit.descProduit}" />
+                    <p:message id="descriptMessage" for="descript" />
+					
+					<h:outputLabel style="color: #336699; font-weight:bold;" value="Catégorie:" /> 
+                    <p:selectOneMenu id="categorieid"   
+                    required="true" requiredMessage="Vous devez selectionner une catégorie" 
+                    value="#{produitBean.editedProduit.categorie}" 
+						panelStyle="width:150px;"  effect="fade"  >
+					   <f:selectItem itemLabel="Select One" itemValue="#{null}"/>
+                       <f:selectItem itemLabel="Vetements classique" itemValue="Vetements classique"  />
+                       <f:selectItem itemLabel="Vetements traditionnels" itemValue="Vetements traditionnels" />
+                       
+                    </p:selectOneMenu>
+                    <p:message id="catMessage" for="categorieid" />
+                    
+					<h:outputLabel for="prix" value="Prix:" title="Prix Produit" style="color: #336699; font-weight:bold; width:80px !important; "  />
+                    <p:inputText id="prix" value="#{produitBean.editedProduit.prixProduit}"  />
+                    <p:message id="prixMessage" for="prix" />
+	              
+	               <h:outputLabel  value="Image:" title="Image Produit" style="color: #336699; font-weight:bold; width:80px !important;   " />
+	               <p:graphicImage id="imageProduit"  value="#{profilsImages.image}"  style="height:120px; width:120px;   " 
+	               cache="false" rendered="true">
+	                 <f:param name="produitId" value="#{produitBean.editedProduit.id}"  />
+	               </p:graphicImage>
+	               <h:form id="photo1" enctype="multipart/form-data"> 
+	               <p:commandButton   icon="ui-icon-arrowrefresh-1-w" title="changer de photo"
+	               update="actualisePhoto:displayePhoto"  oncomplete="PF('photoEdit').show();"  />
+                   </h:form>
+                
+                </h:panelGrid>
+                <p:separator/>
+                <br/>
+                <p:commandButton value="Enregistrer"  update=" growl2, tableProduit, :imgapercu" action="#{produitBean.modifierProduit}" oncomplete="PF('prodEdit').hide();" style="float: right;" />
+            </p:dialog>
+</h:form>
+
+<h:form id="actualisePhoto" enctype="multipart/form-data" >
+            <p:dialog header="Changer l'image du produit" widgetVar="photoEdit" resizable="false" id="editPhoto">
+                <p:growl id="growl9" showDetail="true" sticky="false" life="1000" />
+                <h:panelGrid id="displayePhoto" columns="3" cellpadding="4" style="margin:0 auto;">
+ 
+                    <f:facet name="header">
+                        
+                    </f:facet>
+ 
+                   <h:outputText  value="Image Produit: " style="color: #336699; font-weight:bold;" />
+                   <p:fileUpload fileUploadListener="#{produitBean.handleFileUploadSecond}" update="imguploaded"  allowTypes="/(\.|\/)(gif|jpe?g|png)$/" fileLimit="10" /> 
+                   <p:graphicImage id="imguploaded" value ="#{produitBean.imagePhoto}" style="height:120px; width:120px; "
+                   cache="false" rendered="true" />	
+					
+                </h:panelGrid>
+                <p:separator/>
+                <br/>
+                <p:commandButton value="Enregistrer"  update=" :imageProduit " action="#{produitBean.modifierProduit}" oncomplete="PF('photoEdit').hide();"/>
+            </p:dialog>
+</h:form>
+
+<h:form id="FormApercuProduit" prependId="false" >
+            
+        <p:dialog header="Fiche Produit" widgetVar="produitApercu" modal="true">
+                
+            <h:panelGrid id="display3" columns="2" cellpadding="4" style="margin:0 auto;">
+ 
+                    <h:outputLabel  title="Nom Produit" value="Nom:"
+						style="color: #336699; font-weight:bold;" />
+					<p:inputText value="#{produitBean.produitEnCours.nomProduit}"   />
+				                    
+                    <h:outputLabel  value="Descripion:" title="Descripion Produit" style="color: #336699; font-weight:bold; width:80px !important;" />
+                    <p:inputTextarea  value="#{produitBean.produitEnCours.descProduit}" />
+                    
+					
+					<h:outputLabel style="color: #336699; font-weight:bold;" value="Catégorie:" /> 
+                    <p:inputText value="#{produitBean.produitEnCours.categorie}" />
+                    
+                    
+					<h:outputLabel  value="Prix:" title="Prix Produit" style="color: #336699; font-weight:bold; width:80px !important; "  />
+                    <p:inputText  value="#{produitBean.produitEnCours.prixProduit}"  />
+                    
+	                <h:outputLabel  value="etat:" title="Etat Produit" style="color: #336699; font-weight:bold; width:80px !important; "  />
+                    <p:inputText  value="#{produitBean.produitEnCours.etat}"  />
+	               
+	               <h:outputLabel  value="Image:" title="Image Produit" style="color: #336699; font-weight:bold; width:80px !important;   " />  
+	              <p:graphicImage id="imgapercu"  value="#{profilsImages.image}"  style="height:120px; width:120px;   " 
+	               cache="false" rendered="true">
+	                 <f:param name="produitId" value="#{produitBean.produitEnCours.id}"  />
+	               </p:graphicImage>
+	                    
+                
+                </h:panelGrid>
+            
+            
+            
+            
+            </p:dialog> 
+</h:form>
+
+	
+		
+
+
+</h:body>
+
+</html>

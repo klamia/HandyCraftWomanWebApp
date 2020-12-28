@@ -1,0 +1,86 @@
+<div xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:h="http://java.sun.com/jsf/html" id="header">
+
+	<div class="logo"></div>
+	<div id="graphics">
+		<div class="right">
+
+			<div>
+				<h:form>
+                    #{messages['header.user.welcome']} #{compteEnCoursBean.username}
+			        &#160;&#160;&#160;&#160;
+			        <h:commandLink id="logout" action="#{logoutBean.logout}"
+						value="#{messages['header.user.logout']}" />
+				</h:form>
+			</div>
+
+
+
+
+		</div>
+		<div class="left">
+			<h2
+				style="margin-top: 20px; margin-left: -16px; font-size: 34px; line-height: 45px; color: #000; font-weight: normal; font-family: 'Oxygen', sans-serif; letter-spacing: 1px">Bienvenue
+				à votre Magasin en Ligne</h2>
+		</div>
+		<div class="break"></div>
+
+	</div>
+	<br /> <br />
+	<!-- Tab meniu -->
+	<h:form id="tab">
+		<div id="menu">
+			<div class="right">
+				<h:link id="preferences" styleClass="menu_right"
+					outcome="/pages/user/preferences.xhtml">
+					<span class="account">Mon Compte</span>
+				</h:link>
+			</div>
+			<div class="left">
+				<h:link id="main" styleClass="menu_left"
+					value="#{messages['index.home']}"
+					outcome="/artisane/home-artisane22.xhtml">
+				</h:link>
+				<h:link id="shops" styleClass="menu_left"
+					value="#{messages['index.shops']}" outcome="/artisane/stores.xhtml?faces-redirect=true">
+				</h:link>
+				<h:link id="produits" styleClass="menu_left"
+					value="#{messages['index.items']}" outcome="/artisane/item/item.xhtml?faces-redirect=true">
+				</h:link>
+
+				<h:link id="vente" styleClass="menu_left" value="Vente"
+					outcome="/artisane/vente/vente.xhtml?faces-redirect=true">
+				</h:link>
+				<h:link id="appro" styleClass="menu_left" value="Approvisionnement"
+					outcome="/shops.xhtml">
+				</h:link>
+				<h:link id="promo" styleClass="menu_left" value="Promotion"
+					outcome="/shops.xhtml">
+				</h:link>
+
+				<h:link id="discussions" styleClass="menu_left"
+					value="#{messages['index.discussions']}"
+					outcome="/content/discussions.xhtml">
+				</h:link>
+			</div>
+		</div>
+	</h:form>
+
+	<br />
+
+
+
+	<script>
+		function setClass(id, className) {
+			obj = document.getElementById(id);
+			if (obj != null) {
+				obj.className = className;
+			}
+		}
+		setClass("#{tab}", "selected");
+	</script>
+
+</div>

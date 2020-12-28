@@ -1,0 +1,72 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui" xmlns:b="http://bootsfaces.net/ui"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:c="http://java.sun.com/jsp/jstl/core"
+	xmlns:igdo="www.igdo.lt/igdo"
+	template="/WEB-INF/templates/artisane/mainArtisane.xhtml">
+
+   
+	
+	<ui:define name="navigation">
+
+	
+		<igdo:navigationBox header="Commandes">
+			
+			<b:form>
+				<p:menu toggleable="true"
+					style="border:none !important; max-width:97%; width:97%; background:inherit !important; font-weight: bold !important  ">
+
+                    
+                    <p:menuitem   actionListener="#{navBean.setPageVente('/artisane/vente/defaultVente')}" update="ContenuChangeant"  />
+					<p:menuitem value="Commandes Reçues"
+						actionListener="#{navBean.setPageVente('/artisane/vente/commande-recues')}" update="ContenuChangeant"  />
+					<p:menuitem value="Commandes En cours"
+						actionListener="#{navBean.setPageVente('/artisane/vente/commande-en-cours')}" update="ContenuChangeant"   />
+					<p:menuitem value="Commandes à livrer"
+						actionListener="#{navBean.setPageVente('/artisane/vente/commande-a-livre')}" update="ContenuChangeant"   />
+					<p:menuitem value="Commandes Délivrées"
+						actionListener="#{navBean.setPageVente('/artisane/vente/commande-delivrees')}" update="ContenuChangeant"   />
+                    
+
+
+				</p:menu>
+				
+			</b:form>
+		</igdo:navigationBox>
+	
+	<igdo:navigationBox header="Clients">
+	     <h:form>   
+		<p:menu toggleable="true"
+					style="border:none !important; max-width:97%; width:97%; background:inherit !important; font-weight: bold !important  ">
+		<p:menuitem      />
+					<p:menuitem value="Ajouter Client"
+						 />
+					<p:menuitem value="Modifier Client"
+						   />
+					<p:menuitem value="Liste des clients"
+						 actionListener="#{navBean.setPageVente('/artisane/vente/liste-clients')}" update="ContenuChangeant" />
+							
+		</p:menu>
+				
+			</h:form>	
+	         
+	</igdo:navigationBox>
+	
+	</ui:define>
+
+
+	<ui:define name="content">
+       
+        <p:panel id="ContenuChangeant" style="border:none !important; ">
+               <ui:include  src="#{navBean.pageVente}.xhtml" />
+        </p:panel>
+         
+    </ui:define>    
+        
+		
+
+	
+
+</ui:composition>

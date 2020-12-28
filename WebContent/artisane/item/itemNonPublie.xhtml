@@ -1,0 +1,217 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:b="http://bootsfaces.net/ui" 
+	xmlns:igdo="www.igdo.lt/igdo"
+	xmlns:p="http://primefaces.org/ui">
+<h:head>
+
+	<link rel="stylesheet" type="text/css"
+		href="#{facesContext.externalContext.requestContextPath}/css/bootstrap.min.css" />
+	<link rel="stylesheet" type="text/css"
+		href="#{facesContext.externalContext.requestContextPath}/css/layout.css" />
+	<link rel="stylesheet" type="text/css"
+		href="#{facesContext.externalContext.requestContextPath}/css/main.css" />
+	<link rel="stylesheet" type="text/css"
+		href="#{facesContext.externalContext.requestContextPath}/css/artisane/style.css" />
+
+</h:head>
+<h:body>
+	<b:panel id="panelNonPublie" title="Liste des Articles Non Publiés" look="info"
+		collapsible="false">
+		<b:row>
+			<b:column span="4" offset="9">
+				<h:form id="AjoutP" prependId="false">
+
+					<p:commandButton value="Ajouter Produit" id="ajoutPR"
+						 action="#{itemAction.addItem}" styleClass="buttonClass"
+						resetValues="true"   update=":FormCreationProduit:display" 
+						 oncomplete="PF('prodAjout').show();" />
+
+				</h:form>
+			</b:column>
+		</b:row>
+		<b:row style="margin-top: 15px">
+
+
+			<b:dataTable id="tableProduit" var="item"
+				value="#{itemAction.listItemsNonPublies}" page-length="8"
+				responsive="true" style="margin:10px; width:710px !important ">
+				<b:dataTableColumn label="Image" searchable="false">
+					<p:graphicImage id="imageProfil" value="#{profilsImages.image}"
+						style=" width:80px; height:80px; border:1px solid #ffd954; margin-bottom:5px; float:left; "
+						cache="false" rendered="true">
+						<f:param name="itemId" value="#{item.id}" />
+					</p:graphicImage>
+				</b:dataTableColumn>
+				<b:dataTableColumn label="Nom" value="#{item.name}" />
+				<b:dataTableColumn label="Prix" value="#{item.price} DZD" />
+				<b:dataTableColumn label="Activé" value="#{item.activated}" />
+				<b:dataTableColumn label="publier" orderable="false"
+					searchable="false">
+					<h:form>
+
+						<p:commandButton value="Publier"  resetValues="true"
+							action="#{itemAction.publishItem(item)}"
+							update=":FormPublishItem:display2" styleClass="buttonClass"
+							oncomplete="PF('itemPub').show();" />
+
+					</h:form>
+
+
+				</b:dataTableColumn>
+				<b:dataTableColumn label="Editer" orderable="false"
+					searchable="false">
+					<h:form>
+						<p:commandButton value="Editer"  styleClass="buttonClass">
+
+						</p:commandButton>
+					</h:form>
+				</b:dataTableColumn>
+				<b:dataTableColumn label="Supprimer" orderable="false"
+					searchable="false">
+					<h:form>
+						<p:commandButton value="Supprimer"  styleClass="buttonClass">
+
+						</p:commandButton>
+					</h:form>
+				</b:dataTableColumn>
+
+
+
+			</b:dataTable>
+
+		</b:row>
+	</b:panel>
+	<h:form id="FormCreationProduit" enctype="multipart/form-data">
+
+		<p:dialog id="editP" header="Création Produit" widgetVar="prodAjout"
+			resizable="false" modal="true" dynamic="true">
+
+			<h:panelGrid id="display" columns="3" cellpadding="5">
+
+				<h:outputLabel for="nom" title="Nom Produit" value="Nom:"
+					style="color: #336699; font-weight:bold;" />
+				<p:inputText value="#{itemAction.newItem.name}" id="nom" label="nom"
+					required="true"
+					requiredMessage="Vous devez saisir un nom de produit" />
+				<p:message id="nomMessage" for="nom" />
+
+				<h:outputLabel for="prix" value="Prix:" title="Prix Produit"
+					style="color: #336699; font-weight:bold; width:80px !important;" />
+				<p:inputText id="prix" value="#{itemAction.newItem.price}" />
+				<p:message id="prixMessage" for="prix" />
+
+				<h:outputLabel for="qte" value="Quantité:" title="Quantité Produit"
+					style="color: #336699; font-weight:bold; width:80px !important;" />
+				<p:inputText id="qte" value="#{itemAction.newItem.quantity}" />
+				<p:message id="qteMessage" for="qte" />
+
+
+				<h:outputLabel for="SHdescription" value="Brève Descripion:"
+					title="Descripion Produit"
+					style="color: #336699; font-weight:bold; width:80px !important;" />
+				<p:inputText id="SHdescription"
+					value="#{itemAction.newItem.shortDescription}" />
+				<p:message id="SHdescriptionMessage" for="SHdescription" />
+
+				<h:outputLabel for="FUdescription" value="Descripion Détaillée:"
+					title="Descripion Produit"
+					style="color: #336699; font-weight:bold; width:80px !important;" />
+				<p:inputTextarea id="FUdescription"
+					value="#{itemAction.newItem.fullDescription}" />
+				<p:message id="FUdescriptionMessage" for="FUdescription" />
+
+				<h:outputLabel for="couleur" value="Couleur:"
+					title="Couleur Produit"
+					style="color: #336699; font-weight:bold; width:80px !important;" />
+				<p:selectOneMenu id="couleur" value="#{itemAction.newItem.couleur}" converter="#{couleurConverter}"  style="width:125px" >
+                       <f:selectItem itemLabel="Select One" itemValue="" /> 
+                        <f:selectItems value="#{autoCompleteBean.selectItemCouleurs}"  />
+                </p:selectOneMenu>
+				<p:message id="couleurMessage" for="couleur" />
+				
+				
+				<h:outputLabel for="tendance" value="Type:"
+					title="Type Produit"
+					style="color: #336699; font-weight:bold; width:80px !important;" />
+				<p:selectOneMenu id="tendance" value="#{itemAction.newItem.tendance}" converter="#{tendanceConverter}"  style="width:125px" >
+                       <f:selectItem itemLabel="Select One" itemValue="" /> 
+                        <f:selectItems value="#{autoCompleteBean.selectItemTendances}"  />
+                </p:selectOneMenu>
+				<p:message id="typeMessage" for="tendance" />
+				
+				
+				<h:outputLabel for="imag" value="Image:" title="Image Produit"
+					style="color: #336699; font-weight:bold; width:80px !important;  " />
+
+					<p:fileUpload id="imag" allowTypes="/(\.|\/)(gif|jpe?g|png)$/"
+						fileUploadListener="#{itemAction.handleFileUpload}" />
+					
+				<p:message id="imageMessage" for="imag" />
+
+
+			</h:panelGrid>
+
+			<br />
+			<br />
+
+			<f:facet name="footer">
+
+				<p:commandButton value="Enregistrer" update=" panelNonPublie, tableProduit "
+					action="#{itemAction.ajoutItem}"
+					oncomplete="PF('prodAjout').hide();" />
+
+				<p:commandButton value="Annuler" update="editP"
+					style="float: right;" process="@none"
+					actionListener="#{itemAction.reset}" />
+
+			</f:facet>
+
+		</p:dialog>
+
+	</h:form>
+	<h:form id="FormPublishItem">
+
+		<p:dialog id="pubI" header="Publication Item" widgetVar="itemPub"
+			resizable="false" modal="true" dynamic="true">
+
+			<h:panelGrid id="display2" columns="3" cellpadding="5">
+
+				<h:outputLabel for="shp" value="Shop:"
+					title="Shop dans lequel publier"
+					style="color: #336699; font-weight:bold; width:80px !important;" />
+				<p:selectOneMenu id="shp" value="#{itemAction.itemPublie.shop}"
+					converter="#{shopConverter}" panelStyle="width:150px" effect="fade"
+					required="true" requiredMessage="Vous devez choisir un shop"
+					style="width:350px" filter="true" filterMatchMode="startsWith">
+					<f:selectItem itemLabel="Select One" itemValue="" />
+					<f:selectItems value="#{autoCompleteBean.selectItemShops}" />
+				</p:selectOneMenu>
+				<p:message id="shopMessage" for="shp" />
+
+			</h:panelGrid>
+
+			<br />
+			<br />
+
+			<f:facet name="footer">
+
+				<p:commandButton value="Enregistrer" update=" tableProduit "
+					action="#{itemAction.enableItem}"
+					oncomplete="PF('itemPub').hide();" />
+
+				<p:commandButton value="Annuler" update="pubI" style="float: right;"
+					process="@none" actionListener="#{itemAction.reset}" />
+
+			</f:facet>
+
+		</p:dialog>
+
+	</h:form>
+
+</h:body>
+</html>

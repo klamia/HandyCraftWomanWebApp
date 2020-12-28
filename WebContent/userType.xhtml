@@ -1,0 +1,77 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:ui="http://java.sun.com/jsf/facelets"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:p="http://primefaces.org/ui"
+    xmlns:f="http://java.sun.com/jsf/core">
+    <h:head>
+    
+      
+	  <title> Choix Type Utilisateur</title>
+
+	<!-- Google Fonts -->
+	<link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700|Lato:400,100,300,700,900' rel='stylesheet' type='text/css'/>
+    <link type="text/css" rel="stylesheet" href="#{request.contextPath}/css/animate.css" />
+	<link rel="stylesheet" type="text/css" media="screen" href="#{request.contextPath}/css/style.css"/>
+	<!-- Custom Stylesheet -->
+	<link rel="stylesheet" href="#{request.contextPath}/css/stylle.css"/>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    </h:head>
+    
+    <h:body>
+    
+    
+    <h:form id="AjoutC">
+      <div class="container">
+		
+		<div class="login-box animated fadeInUp">
+			<div class="box-header">
+                        <h2>Vous êtes :</h2>
+			</div> 
+			
+				<p:commandLink styleClass="button1"  action="#{userTypeBean.addCompteArtisane}">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Une Artisane&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p:commandLink>
+                        <br/><br/>
+                <p:commandLink href="formulaire_fournisseur.html" styleClass="button1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Un Fournisseur&nbsp;&nbsp;&nbsp;</p:commandLink>
+                <br/>  <br/> 
+                <p:commandLink  styleClass="button1"  action="#{userTypeBean.addCompteClient}">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Un Client&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p:commandLink>
+			    <br/><br/><br/><br/><br/>
+		 
+		</div>
+	
+	  </div>	
+   <script>
+	$(document).ready(function () {
+    	$('#logo').addClass('animated fadeInDown');
+    	$("input:text:visible:first").focus();
+	});
+	$('#username').focus(function() {
+		$('label[for="username"]').addClass('selected');
+	});
+	$('#username').blur(function() {
+		$('label[for="username"]').removeClass('selected');
+	});
+	$('#password').focus(function() {
+		$('label[for="password"]').addClass('selected');
+	});
+	$('#password').blur(function() {
+		$('label[for="password"]').removeClass('selected');
+	});
+    </script>
+   
+   
+    </h:form>
+    
+     
+     
+     	
+
+    
+    
+   
+    </h:body>
+
+
+
+
+</html>

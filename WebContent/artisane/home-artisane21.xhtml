@@ -1,0 +1,103 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:ui="http://java.sun.com/jsf/facelets"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:p="http://primefaces.org/ui"
+    xmlns:f="http://java.sun.com/jsf/core">
+    <h:head>
+    <link rel="stylesheet" type="text/css" media="screen" href="#{request.contextPath}/css/TemplatePrincipale.css" />
+    <link href='http://fonts.googleapis.com/css?family=Condiment' rel='stylesheet' type='text/css' />
+    <link href='http://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'/>
+    <script src="js/jquery-1.7.min.js"></script>
+    <script src="js/jquery.easing.1.3.js"></script>
+    <script src="js/tms-0.4.x.js"></script>
+    <script>
+		$(document).ready(function(){				   	
+			$('.slider')._TMS({
+				show:0,
+				pauseOnHover:true,
+				prevBu:false,
+				nextBu:false,
+				playBu:false,
+				duration:1000,
+				preset:'fade',
+				pagination:true,
+				pagNums:false,
+				slideshow:7000,
+				numStatus:true,
+				banners:'fromRight',
+				waitBannerAnimation:false,
+				progressBar:false
+			});		
+		});
+    </script>
+    
+    
+    </h:head>
+    <h:body>
+    	
+    <ui:composition template="/WEB-INF/templates/TemplatePrincipale.xhtml">
+    	
+   <ui:define name="header">
+    	  <h:form> 
+    	   <div id="header">
+               <h1><p:commandLink><h:graphicImage value="/images/logo.jpeg" alt=""/></p:commandLink></h1>
+	            
+	           <p:toolbar>
+          <f:facet name="left">
+            <p:commandButton  value="Approvisionnement"  />
+            
+            <span class="ui-separator">
+                <span class="ui-icon ui-icon-grip-dotted-vertical" />
+            </span>
+           
+            <p:commandButton  value="Vente"  />
+ 
+            <span class="ui-separator">
+                <span class="ui-icon ui-icon-grip-dotted-vertical" />
+            </span>
+ 
+            <p:commandButton  value="Communauté" />
+            
+          </f:facet>
+ 
+          <f:facet name="right">
+            <p:commandButton  value="Modifier profil" action="#" />
+            <p:commandButton  value="Déconnexion" action="#{logoutBean.logout}" />
+          </f:facet>
+ 
+           </p:toolbar>
+	           <div class="clear"></div> 
+	       </div>
+   </h:form>
+   </ui:define>
+ 
+    <ui:define name="nav">
+          <br/>
+	  </ui:define>
+   
+    <ui:define name="content">
+    <div class="container_12">
+          <div id="slide" class="box-shadow">		
+            <div class="slider">
+                <p:galleria effect="slide" effectDuration="800" styleClass="galleria" panelWidth="960" panelHeight="300">
+                   <p:graphicImage styleClass="graphimage" value="/images/image1.jpg" title="image1" alt="image1 desc" />
+                   <p:graphicImage styleClass="graphcimage" value="/images/image2.jpg" title="image2" alt=" image2 desc" />
+                   <p:graphicImage styleClass="graphcimage" value="/images/image3.jpg" title="image3" alt=" image3 desc" />
+                   <p:graphicImage styleClass="graphcimage" value="/images/image4.jpg" title="image4" alt=" image4 desc" />
+                   <p:graphicImage styleClass="graphcimage" value="/images/image5.jpg" title="image5" alt=" image5 desc" />
+                </p:galleria>
+            </div>	
+        </div>
+          <div class="clear"></div>
+    </div>
+    
+    
+    </ui:define>
+
+
+</ui:composition>
+    	
+    </h:body>
+
+</html>

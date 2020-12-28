@@ -1,0 +1,92 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:c="http://java.sun.com/jsp/jstl/core"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:sec="http://www.springframework.org/security/tags">
+
+
+<h:head>
+	<title>Connexion</title>
+	<link
+		href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700|Lato:400,100,300,700,900'
+		rel='stylesheet' type='text/css' />
+	<link type="text/css" rel="stylesheet"
+		href="#{request.contextPath}/css/animate.css" />
+	<link type="text/css" rel="stylesheet"
+		href="#{request.contextPath}/css/stylle.css" />
+
+	<script
+		src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+</h:head>
+
+<h:body>
+
+	<div class="container">
+
+		<div class="login-box animated fadeInUp">
+
+
+
+			<div class="box-header">
+				<h2>Se Connecter</h2>
+			</div>
+
+			<c:if test="#{not empty param.login_error}">
+				<div class="alert-error">Identifiant ou mot de passe
+					invalide(s). Veuillez réessayer.</div>
+				<h4 class="border-bot"></h4>
+			</c:if>
+			<c:if test="#{param.expired != null}">
+				<div class="alert-success">Vous avez été déconnecté de force
+					en raison de multiples sessions sur le même compte (une seul
+					session active par utilisateur est autorisé).</div>
+			</c:if>
+
+			<h:form id="formLogin" prependId="false">
+				<p:outputLabel for="j_username" value="Nom d'utilisateur" />
+				<br />
+				<p:inputText id="j_username" name="j_username"
+					value="#{loginBean.username}" label="Username"
+					requiredMessage="Identifiant est un champ requis."
+					icon="ui-icon-person" required="true" placeholder="Identifiant" />
+
+				<br />
+				<p:outputLabel for="j_password" value="Mot de passe" />
+				<br />
+				<p:password id="j_password" name="j_password" label="Password"
+					value="#{loginBean.password}"
+					requiredMessage="Mot de passe est un champ requis." required="true"
+					placeholder="Mot de passe" />
+
+				<br />
+				<div id="divSubmit">
+					<p:commandButton id="loginid" type="submit"
+						action="#{loginBean.login}" value="Connection" ajax="false"
+						icon="ui-icon-locked" />
+					<p:spacer width="5" />
+					<p:commandButton value="Annuler" update="formLogin" type="reset"
+						id="reset" icon="ui-icon-refresh" ajax="false">
+						<p:resetInput target="formLogin" />
+					</p:commandButton>
+				</div>
+				<br />
+				<br />
+				<div  >
+					<h:outputLink  value="#">Mot de passe oublié ? </h:outputLink>
+					<br /> 
+					Nouvel Utilisateur? <h:outputLink  value="userType.xhtml">Inscrivez-vous </h:outputLink>
+				</div>
+
+			</h:form>
+		</div>
+	</div>
+
+</h:body>
+
+
+
+</html>

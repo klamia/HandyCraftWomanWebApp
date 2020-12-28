@@ -1,0 +1,108 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>E-Artisanat</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/style.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/grid_12.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/slider.css">
+    <link href='http://fonts.googleapis.com/css?family=Condiment' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'>
+    <script src="js/jquery-1.7.min.js"></script>
+    <script src="js/jquery.easing.1.3.js"></script>
+    <script src="js/tms-0.4.x.js"></script>
+    <script>
+		$(document).ready(function(){				   	
+			$('.slider')._TMS({
+				show:0,
+				pauseOnHover:true,
+				prevBu:false,
+				nextBu:false,
+				playBu:false,
+				duration:1000,
+				preset:'fade',
+				pagination:true,
+				pagNums:false,
+				slideshow:7000,
+				numStatus:true,
+				banners:'fromRight',
+				waitBannerAnimation:false,
+				progressBar:false
+			});		
+		});
+    </script>
+</head>
+<body>
+<div class="main">
+  <!--==============================header=================================-->
+   
+    <header>
+        <h1><a href="index.html"><img src="images/logo.jpeg" alt=""></a></h1>
+		<div class="col-md-8">
+                    <div class="menu">
+                            <ul style="margin-left: 730px">
+                                <li style="width: 186px"><a href="login.xhtml"><i class="fa fa-user"></i> Se Connecter</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="userType.xhtml"><i class="fa fa-user"></i> S'inscrire</a></li>
+                            </ul>
+                    </div>
+                </div>     
+        <div class="clear"></div>    
+        <nav class="box-shadow">
+            <div>
+                <ul class="menu">
+                    <li class="home-page current"><a href="index.html"><span></span></a></li>
+                    
+                    <li><a href="Servelets/produits.jsp">Produits</a></li>
+                    <li><a href="Servelets/blog.jsp">Blog</a></li>
+                    <li><a href="Servelets/contact.jsp">Contact</a></li>
+                    <li><a href="#">A propos</a></li>
+                </ul>
+                <div class="clear"></div>
+            </div>
+        </nav>
+    </header> 
+  
+  <!--==============================content================================-->
+    <section id="content">
+        <div id="slide" class="box-shadow">		
+            <div class="slider">
+                <ul class="items">
+                    <li><img src="images/image1.jpeg" alt="" /><div class="banner"></div></li>
+                    <li><img src="images/image2.jpeg" alt="" /><div class="banner"></div></li>
+                    <li><img src="images/image3.jpeg" alt="" /><div class="banner"></div></li>
+                    <li><img src="images/image4.jpeg" alt="" /><div class="banner"></div></li>
+                    <li><img src="images/image5.jpeg" alt="" /><div class="banner"></div></li>
+                </ul>
+            </div>	
+        </div>
+        <div class="container_12">
+          <div class="grid_12">
+            <div class="pad-0 border-1">
+                <h2 class="top-1 p0">Toward a new manner to use affordable technologies and social networks to improve business for women in emerging countries </h2>
+                <p class="p2">
+                    C’est une plateforme Algéro-Tunisien qui consiste à trouver le moyen et la manière idéal 
+                    pour mettre à la disposition des femmes artisanes l’ensemble des nouvelles technologies pour
+                    faciliter leur processus du travail : l’achat de la matière première chez les fournisseurs, 
+                    les processus de fabrication des divers produits ainsi que la vente de leurs produits. 
+                </p>
+            </div>
+          </div>
+          <div class="clear"></div>
+        </div>
+      
+    </section> 
+  </div>    
+<!--==============================footer=================================-->
+    <footer>
+        <div class="footer-menu">
+                        <h2 class="footer-wid-title">Contactez-nous</h2>
+                        <ul>
+                            <li><p>  Adresse: 5,Rue des Trois Frères Aissou, Ben-Aknoun-BP 143.16030-Alger   </p></li>
+                            <li><p>Tél/Fax:(021)912186 </p></li>
+                            <li> <p>website:<a href="http://dsism.cerist.dz">http://dsism.cerist.dz</a></p></li>
+                        </ul>                        
+                    </div>
+    </footer>	    
+</body>
+</html>

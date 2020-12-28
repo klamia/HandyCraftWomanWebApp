@@ -1,0 +1,151 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:b="http://bootsfaces.net/ui" 
+	xmlns:igdo="www.igdo.lt/igdo"
+	xmlns:p="http://primefaces.org/ui">
+<h:head>
+
+
+	<link rel="stylesheet" type="text/css"
+		href="#{facesContext.externalContext.requestContextPath}/css/bootstrap.min.css" />
+	<link rel="stylesheet" type="text/css"
+		href="#{facesContext.externalContext.requestContextPath}/css/layout.css" />
+	<link rel="stylesheet" type="text/css"
+		href="#{facesContext.externalContext.requestContextPath}/css/main.css" />
+	<link rel="stylesheet" type="text/css"
+		href="#{facesContext.externalContext.requestContextPath}/css/artisane/style.css" />
+
+
+</h:head>
+<h:body>
+
+	<b:panel id="panelCommandeALivre" title="Liste des Commandes prés pour Livraison"
+		look="info" collapsible="false">
+		<b:row style="margin-top: 15px">
+			
+			<h:form >
+				
+				<b:dataTable id="tableOrderLivre" var="order"
+					value="#{artisaneBean.allonTheWayOrders}" page-length="8"
+					responsive="true" style="margin:10px; width:710px !important ">
+
+
+					<b:dataTableColumn label="Num Commande" value="#{order.id}" />
+					<b:dataTableColumn label="Montant Commande"
+						value="#{order.orderPrice}" />
+					<b:dataTableColumn label="Date Commande" value="#{order.orderedOn}" />
+					<b:dataTableColumn label="Client" value="#{order.client.nom}" />
+					<b:dataTableColumn label="Détail" orderable="false"
+						searchable="false">
+					
+						<p:commandLink value="Aperçu" style=" text-decoration:underline !important; "
+							action="#{artisaneBean.checkOrder(order)}" update="panelCommandeALivre, display5"
+							oncomplete="PF('orderAlivreApercu').show();" />
+                        
+					</b:dataTableColumn>
+					<b:dataTableColumn label="Traitement" orderable="false"
+						searchable="false">
+						<p:commandButton  Value ="Livrer" icon="fa fa-fw fa-edit"
+					actionListener="#{artisaneBean.editOnTheWayOrder(order)}"
+					action="#{artisaneBean.modifierEtatOrder}"
+					update="panelCommandeALivre, tableOrderLivre"
+					title="mettre à jours etat commande" />
+
+					</b:dataTableColumn>
+
+
+					</b:dataTable>
+			</h:form>
+
+
+			<h:form id="FormApercuCommandeAlivre" prependId="false">
+
+				<p:dialog header="Aperçu Commande" widgetVar="orderAlivreApercu"
+					modal="true" width="500" styleClass="modalStyle">
+
+					<h:panelGrid id="display5" columns="2" cellpadding="4"
+						style="margin:0 auto;">
+
+						<h:outputLabel title="Num Commande" value="Numéro:"
+							style="color: #336699; font-weight:bold;" />
+						<p:inputText value="#{artisaneBean.currentOrder.id}" />
+
+						<h:outputLabel value="Date :" title="Date Commande"
+							style="color: #336699; font-weight:bold; width:80px !important;" />
+						<p:inputText value="#{artisaneBean.currentOrder.orderedOn}" />
+
+
+						<h:outputLabel style="color: #336699; font-weight:bold;"
+							value="lieu de livraison:" />
+						<p:inputText value="#{artisaneBean.currentOrder.shippingAddress}" />
+
+
+						<h:outputLabel value="Nom Client" title="Nom Client"
+							style="color: #336699; font-weight:bold; width:80px !important; " />
+						<p:inputText
+							value="#{artisaneBean.currentOrder.client.nom} #{artisaneBean.currentOrder.client.prenom}" />
+
+						<h:outputLabel value="Num Télephone" title="Num Télephone Client"
+							style="color: #336699; font-weight:bold; width:80px !important; " />
+						<p:inputText value="#{artisaneBean.currentOrder.client.numTel}" />
+
+						<h:outputLabel value="Email" title="Email Client"
+							style="color: #336699; font-weight:bold; width:80px !important; " />
+						<p:inputText value="#{artisaneBean.currentOrder.client.email}" />
+
+						<h:outputLabel value="Mode Paiement" title="paiement"
+							style="color: #336699; font-weight:bold; width:80px !important; " />
+						<p:inputText
+							value="#{artisaneBean.currentOrder.client.paymentMethod}" />
+
+						<h:outputLabel value="Montant Total"
+							title="montant total commande"
+							style="color: #336699; font-weight:bold; width:80px !important; " />
+						<p:inputText value="#{artisaneBean.currentOrder.orderPrice}" />
+
+						<h:outputLabel value="Articles" title="Liste des Article"
+							style="color: #336699; font-weight:bold; width:80px !important; " />
+
+						<p:dataTable var="listItems"
+							value="#{artisaneBean.currentOrder.orderedItems}"
+							id="tableItemsOrder" widgetVar="ItemsOrderTable" border="0"
+							cellpadding="0" cellspacing="0" styleClass="table2">
+
+							<p:column headerText="Code Produit">
+								<h:outputText value="#{listItems.item.id}" />
+							</p:column>
+
+							<p:column headerText="Nom Produit">
+								<h:outputText value="#{listItems.item.name}" />
+							</p:column>
+
+							<p:column headerText="Prix Produit">
+								<h:outputText value="#{listItems.item.price}" />
+							</p:column>
+
+							<p:column headerText="Quantité Produit">
+								<h:outputText value="#{listItems.quantity}" />
+							</p:column>
+
+						</p:dataTable>
+
+					</h:panelGrid>
+
+
+
+
+				</p:dialog>
+			</h:form>
+
+
+
+		</b:row>
+	</b:panel>
+
+</h:body>
+
+</html>

@@ -1,0 +1,371 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+   xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:c="http://java.sun.com/jsp/jstl/core"
+	xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+	    <title>Creation Profil Femme Artisane</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <link type="text/css" rel="stylesheet" href="#{request.contextPath}/css/default.css" />
+</h:head>
+
+<h:body>
+
+<h:form id="formInscriptionAr" class="register" >
+	<p:growl id="growl" showDetail="true" sticky="false" life="3000" />
+            <h1>Creation Profil d'Une Femme Artisane  </h1><h3>* Champs Obligatoires</h3>
+            <fieldset class="row2" >
+             <legend>Informations Personnelles </legend>  
+                <p>   
+                  <p:outputLabel for="name" value="Nom " />
+                  <p:inputText id="name"  styleClass="long" value="#{artisaneBean.artisane.nom}" />   
+                </p>
+		        
+		        <p>
+                    <p:outputLabel for="surename" value="Prénom " />
+                    <p:inputText id="surename"  styleClass="long" value="#{artisaneBean.artisane.prenom}" /> 
+                </p>
+                
+                <p>
+                    date of birth
+                </p>
+                
+                <p>
+                    
+                    <p:outputLabel for="placeBirth" value="Lieu de naissance " />
+                    <p:inputText id="placeBirth"  styleClass="long"  value="#{artisaneBean.artisane.lieuNaiss}" />
+                
+                </p>
+                
+                
+               <p>
+                     <h:panelGrid columns="2"  cellpadding="5">
+						<p:outputLabel for="maritalStatus" value="Statut Marital " />
+						<h:selectOneRadio id="maritalStatus" value="#{artisaneBean.artisane.statutMarital}"  >
+                            <f:selectItem itemLabel="Célibataire" itemValue="Célibataire" />
+                            <f:selectItem itemLabel="Mariée" itemValue="Mariée" />
+                            <f:selectItem itemLabel="Divorcée" itemValue="Divorcée" />
+                            <f:selectItem itemLabel="Veuve " itemValue="Veuve" /> 
+                        </h:selectOneRadio>
+                    </h:panelGrid>
+                </p>
+                <p>
+                                
+                    <p:outputLabel for="kidsnumber" value="Nombre d'enfants " />
+                    <p:inputText id="kidsnumber"   value="#{artisaneBean.artisane.nbEnfants}"/>
+                </p>
+                <p>
+                                       
+                    <p:outputLabel for="email" value="Email " />
+                    <p:inputText id="email"  styleClass="long" value="#{artisaneBean.artisane.email}"/>
+                </p>
+                <p>
+                                       
+                     <p:outputLabel for="phone" value="mobile " />
+                     <p:inputMask id="phone" value="#{artisaneBean.artisane.numTel}" mask="(9999) 99-99-99"/>
+                </p>
+                <p>
+                    <p:outputLabel for="wilaya" value="Wilaya " />
+                    <p:selectOneMenu id="wilaya" value="#{artisaneBean.artisane.wilaya}" converter="#{wilayaConverter}"  style="width:125px" >
+                       <f:selectItem itemLabel="Select One" itemValue="" /> 
+                        <f:selectItems value="#{autoCompleteBean.selectItemWilayas}"  />
+                    </p:selectOneMenu>
+                </p>
+		         
+		         <p>
+                                        
+                    <p:outputLabel for="adress" value="Adresse " />
+                   <p:inputText id="adress"  styleClass="long" value="#{artisaneBean.artisane.adresse}" />
+                </p>
+            
+            </fieldset>
+            
+     <div>
+		    
+		    <fieldset class="row2" >
+                  <legend>Parent de la Femme</legend>  
+                    <p>
+                        
+                        <p:outputLabel for="parent" value="Nom et Prénom " />
+                        <p:inputText id="parent"  styleClass="long" value="#" />
+                    </p>
+                    
+                    <p>
+			           parent date of birth
+                    </p>
+                    <p>
+                        
+                        <p:outputLabel for="relation" value="Relation " />
+                        <p:inputText id="relation"  styleClass="long" value="#" />
+                    </p>
+                    
+                    <p>
+                        
+                        <p:outputLabel for="profession" value="Profession " />
+                        <p:inputText id="profession"  styleClass="long" value="#" />
+                       
+                    </p>
+                    
+                    <p>
+                        
+                       <p:outputLabel for="nvEduc" value="Niveau d'éducation  " />
+                       <p:selectOneMenu id="nvEduc"   style="width:128px" 
+                         value="#" >
+                       <f:selectItem itemLabel="Select One" itemValue="#{null}"/>
+                       <f:selectItem itemLabel="Illiterate" itemValue="Illiterate" />
+                       <f:selectItem itemLabel="Primary" itemValue="Primary" />
+                       <f:selectItem itemLabel="Secondary" itemValue="Secondary" />
+                       <f:selectItem itemLabel="Higher" itemValue="Higher" />
+                       
+                       </p:selectOneMenu>  
+                
+                    </p>
+                    
+                    <p>
+                        
+                        <p:outputLabel for="sexe" value="Sexe" />
+                        <p:selectOneRadio id="sexe" value="#" >
+                            <f:selectItem itemLabel="Masculin" itemValue="Masculin" />
+                            <f:selectItem itemLabel="Feminin" itemValue="Feminin" />
+                        </p:selectOneRadio>           
+                     
+                     </p>
+                   
+                  
+                     
+                     
+                     
+                    <fieldset class="row2" >
+                        <legend>Langage</legend>
+                        
+                        <p>
+                            <p:outputLabel for="nomLang" value="Nom" />
+                            
+                            <p:selectOneMenu id="nomLang" value="#{artisaneBean.artisane.langage}" style="width:125px" converter="#{langageConverter}" >
+                               <f:selectItem itemLabel="Select One" itemValue="" /> 
+                               <f:selectItems value="#{autoCompleteBean.selectItemLangages}" />
+                             </p:selectOneMenu>
+                        
+                        </p>
+                        
+                    </fieldset>
+                </fieldset>
+                
+                <div>
+                    <fieldset class="row2"  >
+                        <legend>Activités
+                        </legend>
+                         <p>
+                            <p:outputLabel for="nomActiv" value="Nom de l'Activité" />
+                            <p:selectOneMenu id="nomActiv" value="#{artisaneBean.artisane.activite}" converter="#{activiteConverter}" style="width:125px">
+                               <f:selectItem itemLabel="Select One" itemValue="" /> 
+                               <f:selectItems value="#{autoCompleteBean.selectItemActivites}" />
+                             </p:selectOneMenu>
+                            
+                         </p>
+                         
+                    </fieldset>
+                    
+                    <fieldset class="row2" >
+                         <legend>Diplôme
+                        </legend>
+                        <p>
+                            <p:outputLabel for="nomDipl" value="Nom du diplôme" />
+                            <p:selectOneMenu id="nomDipl" value="#{artisaneBean.artisane.diplome}" converter="#{diplomeConverter}" style="width:125px">
+                               <f:selectItem itemLabel="Select One" itemValue="" /> 
+                               <f:selectItems value="#{autoCompleteBean.selectItemDiplomes}" />
+                             </p:selectOneMenu>
+                        </p>
+                        
+                        
+                    </fieldset>
+                    
+                </div>
+            </div>
+            
+            <fieldset class="row4"  >
+                <legend>Autres
+                </legend>
+                <p>
+                    
+                    <p:outputLabel for="input" value="Mode Entrée" />
+                    <p:selectOneMenu id="input"   style="width:128px" 
+                         value="#{artisaneBean.artisane.inputMode}" >
+                       <f:selectItem itemLabel="Select One" itemValue="#{null}" />
+                       <f:selectItem itemLabel="Manipulation" itemValue="Manipulation" />
+                       <f:selectItem itemLabel="Voice" itemValue="Voice" />
+                  
+                    </p:selectOneMenu> 
+                   
+                   <p:outputLabel for="output" value="Mode Sortie" />
+                    <p:selectOneMenu id="output"   style="width:128px" 
+                         value="#{artisaneBean.artisane.outputMode}">
+                       <f:selectItem itemLabel="Select One" itemValue="#{null}" />
+                       <f:selectItem itemLabel="Visual " itemValue="Visual " />
+                       <f:selectItem itemLabel="Auditory" itemValue="Auditory" />
+                       <f:selectItem itemLabel="Haptic" itemValue="Haptic" />
+                  
+                    </p:selectOneMenu> 
+                  
+                </p>
+               
+                <p>
+                    <p:outputLabel for="nivEducation" value="Niveau d'éducation" />
+                    <p:selectOneMenu id="nivEducation"   style="width:128px" 
+                         value="#{artisaneBean.artisane.educLevel}">
+                       <f:selectItem itemLabel="Select One" itemValue="#{null}"/>
+                       <f:selectItem itemLabel="Illiterate" itemValue="Illiterate" />
+                       <f:selectItem itemLabel="Primary" itemValue="Primary" />
+                       <f:selectItem itemLabel="Secondary" itemValue="Secondary" />
+                       <f:selectItem itemLabel="Higher" itemValue="Higher" />
+                  
+                    </p:selectOneMenu> 
+             
+                    
+                    <p:outputLabel for="org" value="Mode Organisation " />
+                    <p:selectOneMenu id="org"   style="width:128px" 
+                         value="#{artisaneBean.artisane.organisation}">
+                       <f:selectItem itemLabel="Select One" itemValue="#{null}"/>
+                       <f:selectItem itemLabel="Phone" itemValue="Phone" />
+                       <f:selectItem itemLabel="Computer" itemValue="Computer" />
+                       <f:selectItem itemLabel="ManagementSoftware" itemValue="ManagementSoftware" />
+                       <f:selectItem itemLabel="Internet" itemValue="Internet" />
+                        <f:selectItem itemLabel="EcommerceSite" itemValue="EcommerceSite" />
+                    </p:selectOneMenu>
+                    
+                </p>
+                <p>
+                    <p:outputLabel for="coord" value="Mode Coordination " />
+                    <p:selectOneMenu id="coord"   style="width:128px" 
+                         value="#{artisaneBean.artisane.coordination}">
+                       <f:selectItem itemLabel="Select One" itemValue="#{null}"/>
+                       <f:selectItem itemLabel="FaceToFace" itemValue="FaceToFace" />
+                       <f:selectItem itemLabel="Email" itemValue="Email" />
+                       <f:selectItem itemLabel="Phone" itemValue="Phone" />
+                       <f:selectItem itemLabel="Internet" itemValue="Internet" />
+                        
+                    </p:selectOneMenu>
+                         
+                    <p:outputLabel for="pers" value="Personalité " />
+                    <p:selectOneMenu id="pers"   style="width:128px" 
+                        value="#{artisaneBean.artisane.personnalite}">
+                       <f:selectItem itemLabel="Select One" itemValue="#{null}"/>
+                       <f:selectItem itemLabel="SellingOnInternet" itemValue="SellingOnInternet" />
+                       <f:selectItem itemLabel="Cooperative" itemValue="Cooperative" />
+                       <f:selectItem itemLabel="Helpful" itemValue="Helpful" />
+                       <f:selectItem itemLabel="OpenMined" itemValue="OpenMined" />
+                       <f:selectItem itemLabel="Thinking" itemValue="Thinking" />
+                       <f:selectItem itemLabel="Introvert" itemValue="Introvert" />
+                       <f:selectItem itemLabel="Intelligent" itemValue="Intelligent" />
+                      
+                    </p:selectOneMenu>
+                    
+                </p>
+                
+                <fieldset class="row3" >
+                      <legend>Computer Literacy 
+                        </legend> 
+                        <p>
+                            <p:outputLabel for="compLit" value="Computer Literacy " />
+                            <p:selectOneMenu id="compLit" value="#{artisaneBean.artisane.compIteracy}" style="width:125px" converter="#{computerliteracysConverter}" >
+                               <f:selectItem itemLabel="Select One" itemValue="" /> 
+                               <f:selectItems value="#{autoCompleteBean.selectItemComputerliteracys}" />
+                             </p:selectOneMenu>
+                            
+                        </p>
+                        
+                        <p>
+                            
+                            <p:outputLabel for="nivComp" value="Niveau " />
+                            <p:selectOneMenu id="nivComp"   style="width:128px" 
+                               value="#{artisaneBean.artisane.niveaucompLit}" >
+                                 <f:selectItem itemLabel="Select One" itemValue="#{null}"/>
+                                 <f:selectItem itemLabel="Low" itemValue="Low" />
+                                 <f:selectItem itemLabel="Medium" itemValue="Medium" />
+                                 <f:selectItem itemLabel="Good" itemValue="Good" />
+                                 <f:selectItem itemLabel="Perfect" itemValue="Perfect" />
+                             </p:selectOneMenu>
+                            
+                        </p>
+                    </fieldset>
+            
+            </fieldset>
+           
+            <fieldset class="row3" >
+                <legend>Capacités physiques
+                </legend>
+                
+                <p>
+                    <p:outputLabel for="physNom" value="Capacités physique " />
+                            <p:selectOneMenu id="physNom" value="#{artisaneBean.artisane.capPhy}" style="width:125px" converter="#{capacitephysConverter}" >
+                               <f:selectItem itemLabel="Select One" itemValue="" /> 
+                               <f:selectItems value="#{autoCompleteBean.selectItemCapacitephys}" />
+                             </p:selectOneMenu>
+                    
+                </p>
+                
+                 <p>
+                    <p:outputLabel for="physNiv" value="Niveau " />
+                    <p:selectOneMenu id="physNiv"   style="width:128px" 
+                              value="#{artisaneBean.artisane.nivCapPhys}" >
+                                 <f:selectItem itemLabel="Select One" itemValue="#{null}" />
+                                 <f:selectItem itemLabel="Severe" itemValue="Severe" />
+                                 <f:selectItem itemLabel="Low" itemValue="Low" />
+                                 <f:selectItem itemLabel="Moderate" itemValue="Moderate" />
+                                 <f:selectItem itemLabel="Good" itemValue="Good" />
+                                 
+                     </p:selectOneMenu>
+                    
+                  </p>
+            
+                <fieldset class="row3"  >
+                     <legend>Capacités Cognitives
+                    </legend>
+                    <p>
+                         <p:outputLabel for="cognNom" value="Capacités Cognitives " />
+                            
+                            <p:selectOneMenu id="cognNom" value="#{artisaneBean.artisane.capCogn}" style="width:125px" converter="#{capacitecognsConverter}" >
+                               <f:selectItem itemLabel="Select One" itemValue="" /> 
+                               <f:selectItems value="#{autoCompleteBean.selectItemCapacitecogn}" />
+                             </p:selectOneMenu>
+                             
+                             <p:outputLabel for="cognNiv" value="Niveau " />
+                             <p:selectOneMenu id="cognNiv"   style="width:128px" 
+                              value="#{artisaneBean.artisane.nivCapCogn}" >
+                                 <f:selectItem itemLabel="Select One" itemValue="#{null}" />
+                                 
+                                 <f:selectItem itemLabel="Low" itemValue="Low" />
+                                 <f:selectItem itemLabel="Medium" itemValue="Medium" />
+                                 <f:selectItem itemLabel="High" itemValue="High" />
+                                 
+                             </p:selectOneMenu>
+                        
+                     </p>
+                   
+                    <fieldset class="row3" >
+                        <legend>Centres Intérets
+                        </legend>
+                        <p>
+                            <p:outputLabel for="interestNom" value="Centres Intérets " />
+                            
+                            <p:selectOneMenu id="interestNom" value="#{artisaneBean.artisane.interet}" style="width:125px" converter="#{centresinteretsConverter}" >
+                               <f:selectItem itemLabel="Select One" itemValue="" /> 
+                               <f:selectItems value="#{autoCompleteBean.selectIteminteret}" />
+                             </p:selectOneMenu>
+                        </p>
+                        
+                    </fieldset>
+                   </fieldset>
+                  </fieldset>
+            
+            <div><br/><p:commandButton styleClass="button" type="submit" update="growl" value="Envoyer &raquo;" action="#{artisaneBean.inscription}" ></p:commandButton><br/></div>
+   
+   
+    </h:form>
+
+
+</h:body>
+</html>

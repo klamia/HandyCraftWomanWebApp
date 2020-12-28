@@ -1,0 +1,82 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:b="http://bootsfaces.net/ui" 
+	xmlns:igdo="www.igdo.lt/igdo"
+	xmlns:p="http://primefaces.org/ui">
+<h:head>
+
+	<link rel="stylesheet" type="text/css"
+		href="#{facesContext.externalContext.requestContextPath}/css/bootstrap.min.css" />
+	<link rel="stylesheet" type="text/css"
+		href="#{facesContext.externalContext.requestContextPath}/css/layout.css" />
+	<link rel="stylesheet" type="text/css"
+		href="#{facesContext.externalContext.requestContextPath}/css/main.css" />
+	<link rel="stylesheet" type="text/css"
+		href="#{facesContext.externalContext.requestContextPath}/css/artisane/style.css" />
+
+</h:head>
+<h:body>
+	<b:panel id="panelPublie" title="Liste des produits publiés" look="info"
+		collapsible="false" >
+
+		<b:row style="margin-top: 15px">
+
+
+			<b:dataTable id="tableProduitPublie" var="item"
+				value="#{itemAction.listItemsPublies}" page-length="8"
+				responsive="true" style="margin:10px; width:710px !important ">
+				<b:dataTableColumn label="Image" searchable="false">
+					<p:graphicImage id="imageProfil" value="#{profilsImages.image}"
+						style=" width:80px; height:80px; border:1px solid #ffd954; margin-bottom:5px; float:left; "
+						cache="false" rendered="true">
+						<f:param name="itemId" value="#{item.id}" />
+					</p:graphicImage>
+				</b:dataTableColumn>
+				<b:dataTableColumn label="Nom" value="#{item.name}" />
+				<b:dataTableColumn label="Prix" value="#{item.price} DZD" />
+				<b:dataTableColumn label="Activé" value="#{item.activated}" />
+
+				<b:dataTableColumn label="Editer" orderable="false"
+					searchable="false">
+					<h:form>
+						<p:commandButton value="Editer"   styleClass="buttonClass">
+
+						</p:commandButton>
+					</h:form>
+				</b:dataTableColumn>
+				<b:dataTableColumn label="Supprimer" orderable="false"
+					searchable="false">
+					<h:form>
+						<p:commandButton value="Supprimer"  styleClass="buttonClass" >
+
+						</p:commandButton>
+					</h:form>
+				</b:dataTableColumn>
+
+				<b:dataTableColumn label="Désactiver Produit" orderable="false"
+					searchable="false">
+					<h:form>
+
+						<p:commandButton value="Désactiver"  
+							actionListener="#{itemAction.NonpublishItem(item)}"
+							 styleClass="buttonClass"
+							 action="#{itemAction.disableItem}" update="panelPublie, tableProduitPublie" />
+
+					</h:form>
+
+
+				</b:dataTableColumn>
+
+			</b:dataTable>
+
+		</b:row>
+	</b:panel>
+
+	
+
+</h:body>
+</html>

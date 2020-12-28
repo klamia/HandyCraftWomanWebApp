@@ -1,0 +1,48 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui" xmlns:b="http://bootsfaces.net/ui"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:c="http://java.sun.com/jsp/jstl/core"
+	xmlns:igdo="www.igdo.lt/igdo"
+	template="/WEB-INF/templates/artisane/mainArtisane.xhtml">
+
+
+	<ui:define name="navigation">
+		<igdo:navigationBox header="Gestion des Produits">
+			<h:form>
+				<p:menu toggleable="true"
+					style="border:none !important; max-width:97%; width:97%; height:50%; background:inherit !important;   ">
+
+                    
+                    <p:menuitem  value="Liste Produits" actionListener="#{navBean.setPage('/artisane/item/defaultItem')}" update="ContenuChangeant" />
+					<p:menuitem value="Articles publiés"
+						actionListener="#{navBean.setPage('/artisane/item/itemPublie')}" update="ContenuChangeant" />
+					<p:menuitem value="Articles Non publiés"
+						actionListener="#{navBean.setPage('/artisane/item/itemNonPublie')}" update="ContenuChangeant" />
+					<p:menuitem value="Produit en Promotion"
+						actionListener="#{navBean.setPage('/artisane/clients')}" />
+					<p:menuitem value="Stock Actuel"
+						actionListener="#{navBean.setPage('/artisane/clients')}" />
+                    
+
+
+				</p:menu>
+			</h:form>
+		</igdo:navigationBox>
+	</ui:define>
+
+
+	<ui:define name="content">
+        
+        <p:panel id="ContenuChangeant" style="border:none !important; ">
+               <ui:include src="#{navBean.page}.xhtml" />
+        </p:panel>
+        
+    </ui:define>    
+        
+		
+
+	
+
+</ui:composition>

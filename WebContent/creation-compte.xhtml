@@ -1,0 +1,71 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:c="http://java.sun.com/jsp/jstl/core"
+	xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+	<title>Creation Compte </title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link type="text/css" rel="stylesheet"
+		href="#{request.contextPath}/css/default.css" />
+</h:head>
+
+<h:body>
+	
+	<h:form id="formInscriptionAr" class="register">
+
+		<h1>Création de compte</h1>
+		<h3>* Champs Obligatoires</h3>
+		<p:growl id="growl" showDetail="true" sticky="false" life="3000" />
+
+		<h:panelGrid id="display" columns="3" cellpadding="5">
+			<h:outputLabel for="login" title="Login" value="Login:"
+				style="color: #336699; font-weight:bold;" />
+			<p:inputText value="#{userTypeBean.compte.username}" id="login"
+				label="login" required="true" />
+			<p:message id="loginMessage" for="login" />
+
+			<h:outputLabel for="pwd1" value="Mot de passe"
+				style="color: #336699; font-weight:bold;" />
+			<p:password id="pwd1" value="#{userTypeBean.compte.password}"
+				feedback="true" promptLabel="Vous devez saisir un mot de passe"
+				weakLabel="Faible" goodLabel="Bon" strongLabel="Fort" match="pwd2"
+				required="true"
+				validatorMessage="les mots de passes entrés ne se correspondent pas" />
+			<p:spacer />
+
+			<h:outputLabel for="pwd2" value="Confirmer Mot de passe"
+				style="color: #336699; font-weight:bold;" />
+			<p:password id="pwd2" value="#{userTypeBean.compte.password}"
+				feedback="true" promptLabel="Vous devez saisir un mot de passe"
+				weakLabel="Faible" goodLabel="Bon" strongLabel="Fort"
+				required="true" />
+			<p:spacer />
+
+			<h:outputLabel for="email" title="Email" value="Email:"
+				style="color: #336699; font-weight:bold;" />
+			<p:inputText value="#{userTypeBean.compte.email}" id="email"
+				label="email" required="true" />
+			<p:message id="emailMessage" for="email" />
+
+
+		</h:panelGrid>
+		<br />
+		<br />
+     
+
+		<p:commandButton value="Enregistrer" update="growl"
+			action="#{userTypeBean.ajoutCompte}" />
+		<p:spacer width="50" height="10" />
+		<p:commandButton value="Annuler" process="@none" actionListener="#" />
+
+
+	</h:form>
+</h:body>
+
+
+
+</html>

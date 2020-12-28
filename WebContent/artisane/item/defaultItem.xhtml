@@ -1,0 +1,72 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:b="http://bootsfaces.net/ui"
+	xmlns:igdo="www.igdo.lt/igdo"
+	xmlns:p="http://primefaces.org/ui"  >
+<h:head>
+
+	    <f:metadata>
+			<f:viewParam name="categoryId" value="#{shoppingBean.categoryId}" />
+			<f:viewParam name="attributeId" value="#{shoppingBean.attributeId}" />
+			
+		</f:metadata>
+	
+	<link rel="stylesheet" type="text/css"
+		href="#{facesContext.externalContext.requestContextPath}/css/bootstrap.min.css" />
+	<link rel="stylesheet" type="text/css"
+		href="#{facesContext.externalContext.requestContextPath}/css/layout.css" />
+	<link rel="stylesheet" type="text/css"
+		href="#{facesContext.externalContext.requestContextPath}/css/main.css" />
+    <link rel="stylesheet" type="text/css"
+		href="#{facesContext.externalContext.requestContextPath}/css/artisane/style.css" />
+
+</h:head>
+<h:body>
+
+<igdo:searchBar />
+		<h:form >
+
+			<div id="products">
+				<ui:repeat value="#{itemAction.listItemsArtisane}" var="item">
+
+					<div class="main_box">
+						
+						<div class="top">
+							<div class="left"></div>
+						</div>
+						<div class="content">
+							<div class="title">
+								<a href="#">#{item.name}</a>
+							</div>
+							<div class="price">
+								<a href="#">
+								<p:graphicImage id="imageProfil" value="#{profilsImages.image}"
+									style=" width:80px; height:80px; border:1px solid #ffd954; margin-bottom:5px; float:left; "
+									cache="false" rendered="true">
+									<f:param name="itemId"
+										value="#{item.id}" />
+								</p:graphicImage>
+								</a>
+								<div class="number">#{item.price} #{messages['currency']}
+								</div>
+								
+							</div>
+							<div class="break">#{item.shortDescription}</div>
+						</div>
+						<div class="bottom">
+							<div class="right">
+								<div class="left"></div>
+							</div>
+						</div>
+					</div>
+				</ui:repeat>
+				<div class="cleaner"></div>
+			</div>
+		</h:form>
+
+</h:body>
+</html>

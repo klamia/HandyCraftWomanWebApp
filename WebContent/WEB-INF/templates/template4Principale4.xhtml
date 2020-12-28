@@ -1,0 +1,89 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:ui="http://java.sun.com/jsf/facelets"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:p="http://primefaces.org/ui"
+    xmlns:f="http://java.sun.com/jsf/core">
+
+ <h:head>
+ 
+    <link type="text/css" rel="stylesheet" href="#{request.contextPath}/css/template4Principale4.css" />
+  
+</h:head>
+<h:body >
+ <div id="global">   
+    
+    <ui:insert name="header" >
+      <div id="entete">
+        <h:form> 
+		 <p:graphicImage value="/images/logo.jpeg" styleClass ="styleImageFooter" />
+	    </h:form>
+       </div>
+    </ui:insert>
+    
+    <!--  
+    <ui:insert name="nav" >
+       <div id="navigation">
+       <h:form> 
+		<p:toolbar  styleClass="toolbarStyleEntete">
+		<p:toolbarGroup align="left">
+		  <p:commandButton  value="#{msg.button_navigation}" styleClass="commandBPrincipaleStyle" image="ui-icon-home" />
+		<p:commandButton  value="#{msg.button_deconnexion}" styleClass="commandBDeconnect2Style" image="ui-icon-unlocked" /> 
+		   </p:toolbarGroup>  
+		<p:toolbarGroup align="right">
+		
+		</p:toolbarGroup> 
+        </p:toolbar> 
+	   </h:form>
+       </div>
+	</ui:insert>
+    -->
+    
+    <ui:insert name="nav" >
+       <div id="navigation">
+       <p:toolbar  styleClass="toolbarStyleEntete">
+		<p:toolbarGroup align="left">
+		 
+		 </p:toolbarGroup>
+	<p:toolbarGroup align="right">
+		<ui:insert name="loginame" >
+		<h:outputFormat value="Welcome, {0}">
+        <f:param value="#{loginBean.username}" />
+        </h:outputFormat>
+		</ui:insert>
+		
+		<p:commandButton  value="Deconnexion" styleClass="commandBDeconnect2Style" icon="ui-icon-unlocked" action="#{logoutBean.logout}"/>
+	</p:toolbarGroup> 
+        </p:toolbar> 
+       </div>
+	   </ui:insert>
+    
+ <ui:insert name="content" >
+  <div id= "contenuHome4">
+    
+     
+     
+     <div id= "contenuGauche4">
+    	<!--  <p:graphicImage value="/images/RH2.jpg" styleClass ="styleImgContGauch" /> -->
+	</div> 
+	 
+    
+      <div id="contenuDroit4">
+          
+      </div>  
+    
+   </div>
+  </ui:insert>
+    
+
+    
+    <ui:insert name="footer" >
+    <div id="pied"> 
+       <h3>CERIST © 2017 Plateforme E-Artisanat</h3>
+       <h4>Conception et Réalisation : Division DSISM</h4>	
+      </div> 
+     </ui:insert>
+   
+ </div>   
+</h:body>
+</html>

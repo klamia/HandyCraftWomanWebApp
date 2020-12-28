@@ -1,0 +1,25 @@
+<td xmlns="http://www.w3.org/1999/xhtml" xmlns:igdo="www.igdo.lt/igdo"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html" id="left">
+	<!-- Shops types navigation --> 
+	<igdo:navigationBox
+		header="#{messages['navigation.categories']}">
+
+		<ui:repeat value="#{shoppingBean.categoriesShop}" var="category">
+			<h:link style='font-weight:bold'
+				rendered="#{shoppingBean.selectedCategory == category}"
+				value="#{category.name}" outcome="/shops.xhtml">
+				<f:param name="categoryId" value="#{category.id}" />
+			</h:link>
+			<h:link rendered="#{shoppingBean.selectedCategory != category}"
+				value="#{category.name}" outcome="/shops.xhtml">
+				<f:param name="categoryId" value="#{category.id}" />
+			</h:link>
+		</ui:repeat>
+
+	</igdo:navigationBox> 
+	
+	
+
+</td>

@@ -1,0 +1,58 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title> Création de blog</title>
+
+	<!-- Google Fonts -->
+	<link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700|Lato:400,100,300,700,900' rel='stylesheet' type='text/css'>
+
+	<link rel="stylesheet" href="css/animate.css">
+	<!-- Custom Stylesheet -->
+	<link rel="stylesheet" href="css/style_blog.css">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+</head>
+<body>
+    <div class="suite_blog">
+	<div class="suite animated fadeInUp">
+            <form id="form" method="post" action="Servelets/BlogServelet.jsp" >
+			<label>Titre de la discussion</label>
+			<br/>                     
+                        <label><input name="Nom" type="text"></label>
+			<br/>
+			<label>Description</label>
+			<br/>
+                        <label><textarea name="Msg" value="Msg"></textarea></label>
+			<br/>
+			<div class="btns">
+                            <button class="button1" type="submit">Ajouter</button>                               
+                        </div>
+            </form>
+                        
+        </div>
+    </div>
+</body>
+
+<script>
+	$(document).ready(function () {
+    	$('#logo').addClass('animated fadeInDown');
+    	$("input:text:visible:first").focus();
+	});
+	$('#username').focus(function() {
+		$('label[for="username"]').addClass('selected');
+	});
+	$('#username').blur(function() {
+		$('label[for="username"]').removeClass('selected');
+	});
+	$('#password').focus(function() {
+		$('label[for="password"]').addClass('selected');
+	});
+	$('#password').blur(function() {
+		$('label[for="password"]').removeClass('selected');
+	});
+</script>
+
+</html>

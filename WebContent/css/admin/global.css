@@ -1,0 +1,113 @@
+@CHARSET "UTF-8";
+
+form.igdoform fieldset {
+	padding: 1em;
+	font: 80%/ 1 sans-serif;
+}
+
+form.igdoform legend {
+	padding: 0.2em 0.5em;
+	border: 1px grey;
+	color: grey;
+	font-size: 90%;
+	text-align: right;
+}
+
+form.igdoform div.row {
+	width: 500px;
+	clear: left;
+	margin: 0;
+	padding: 5px 0 8px 0;
+	padding-left: 155px;
+	height: 1%;
+}
+
+form.igdoform div.list {
+	width: 500px;
+	clear: left;
+	margin: 0;
+	padding: 5px 0 8px 0;
+	padding-left: 70px;
+}
+
+form.igdoform label {
+	font-weight: bold;
+	float: left;
+	margin-left: -155px; /*width of left column*/
+	width: 150px;
+	/*width of labels. Should be smaller than left column (155px) to create some right margin*/
+}
+
+form.igdoform input[type="text"] {
+	padding: 3px 5px;
+}
+
+form.igdoform input[type="text"].small {
+	width: 100px;
+}
+
+form.igdoform input[type="text"].medium {
+	width: 200px;
+}
+
+form.igdoform input[type="text"].big {
+	width: 300px;
+}
+
+form.igdoform textarea {
+	padding: 5px;
+}
+
+form.igdoform textarea.small {
+	width: 200px;
+	height: 100px;
+}
+
+form.igdoform textarea.medium {
+	width: 250px;
+	height: 150px;
+}
+
+form.igdoform textarea.big {
+	width: 300px;
+	height: 200px;
+}
+
+form.igdoform input,.cssform textarea {
+	border: #999 solid 1px;
+	background: #FFF url(../images/formgrad.png) repeat-x top left;
+}
+
+/*.threepxfix class below:
+Targets IE6- ONLY. Adds 3 pixel indent for multi-line form contents.
+to account for 3 pixel bug: http://www.positioniseverything.net/explorer/threepxtest.html
+*/
+* html .threepxfix {
+	margin-left: 3px;
+}
+
+.button {
+	cursor: pointer;
+	border: outset 1px #ccc;
+	background: #999;
+	color: #666;
+	font-weight: bold;
+	padding: 1px 2px;
+	background: url(../images/buttonbg.gif) repeat-x left top;
+}
+
+.logoutLink {
+	font-weight: bold;
+	font-size: 10px;
+	color: grey;
+	text-decoration: none; position : absolute;
+	top: 10px;
+	right: 10px;
+	position: absolute;
+}
+
+.currentShop {
+	position: absolute;
+	top: 20px;
+	right: 10px;
+}

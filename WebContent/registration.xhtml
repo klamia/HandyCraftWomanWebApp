@@ -1,0 +1,87 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:c="http://java.sun.com/jsp/jstl/core"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:sec="http://www.springframework.org/security/tags">
+
+
+<h:head>
+	<title>Inscription</title>
+	<link
+		href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700|Lato:400,100,300,700,900'
+		rel='stylesheet' type='text/css' />
+	<link type="text/css" rel="stylesheet"
+		href="#{request.contextPath}/css/animate.css" />
+	<link type="text/css" rel="stylesheet"
+		href="#{request.contextPath}/css/stylle.css" />
+
+	<script
+		src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+</h:head>
+
+<h:body>
+
+	<div class="container">
+
+		<div class="login-box animated fadeInUp">
+
+
+
+			<div class="box-header">
+				<h2>S'inscrire</h2>
+			</div>
+
+
+
+			<h:form id="formLogin" prependId="false">
+				<p:outputLabel for="username" value="Nom d'utilisateur" />
+				<br />
+				<p:inputText id="username" value="#{userTypeBean.compte.username}"
+					label="Username" requiredMessage="Identifiant est un champ requis."
+					icon="ui-icon-person" required="true"  />
+
+				<br />
+				<p:outputLabel for="pwd1" value="Mot de passe" />
+				<br />
+				<p:password id="pwd1" value="#{userTypeBean.compte.password}"
+					feedback="true" promptLabel="Vous devez saisir un mot de passe"
+					weakLabel="Faible" goodLabel="Bon" strongLabel="Fort" match="pwd2"
+					required="true"
+					validatorMessage="les mots de passes entrés ne se correspondent pas" />
+
+				<br />
+				<p:outputLabel for="pwd2" value="Confirmer Mot de passe" />
+				<br />
+				<p:password id="pwd2" value="#{userTypeBean.compte.password}"
+					feedback="true" promptLabel="Vous devez saisir un mot de passe"
+					weakLabel="Faible" goodLabel="Bon" strongLabel="Fort"
+					required="true" />
+				<br />
+				<p:outputLabel for="email"  value="Email:" />
+				<br />
+				<p:inputText value="#{userTypeBean.compte.email}" id="email"
+					label="email" required="true" />
+
+				<div id="divSubmit">
+					<p:commandButton id="loginid" type="submit"
+						action="#{userTypeBean.ajoutCompte}" value="Enregistrer" ajax="false" />
+					<p:spacer width="5" />
+					<p:commandButton value="Annuler" update="formLogin" type="reset"
+						id="reset" icon="ui-icon-refresh" ajax="false">
+						<p:resetInput target="formLogin" />
+					</p:commandButton>
+				</div>
+				
+			</h:form>
+		</div>
+	</div>
+
+</h:body>
+
+
+
+</html>

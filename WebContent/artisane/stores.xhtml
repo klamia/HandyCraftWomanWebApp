@@ -1,0 +1,287 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui" xmlns:b="http://bootsfaces.net/ui"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:hftl="http://hftl.org"
+	xmlns:hf="http://java.sun.com/jsf/composite/tags"
+	xmlns:igdo="www.igdo.lt/igdo"
+	xmlns:c="http://java.sun.com/jsp/jstl/core"
+	template="/WEB-INF/templates/artisane/mainArtisane.xhtml">
+
+	<ui:define name="content">
+		<b:panel id="panelStore" title="Liste des Stores en ligne" look="info"
+			collapsible="false">
+
+			<b:row styleClass="show-grid">
+				<b:column span="4" offset="9">
+					<h:form id="AjoutS" prependId="false">
+
+						<p:commandButton value="Ajouter Store" id="ajoutST"
+							resetValues="true" action="#{shopActionBean.addShop}"
+							update=":FormCreationShop:display" icon="fa fa-fw fa-plus"
+							styleClass="buttonClass" oncomplete="PF('shopAjout').show();" />
+
+					</h:form>
+				</b:column>
+			</b:row>
+
+
+			<b:row style="margin-top: 15px">
+
+				<b:dataTable id="tableShop" var="shop"
+					value="#{shopActionBean.listShopsArtisane}" page-length="8"
+					responsive="true" style=" margin: 15px; width:710px !important ">
+
+					<b:dataTableColumn label="Id" value="#{shop.id}" />
+					<b:dataTableColumn label="Nom" value="#{shop.name}" />
+
+					<b:dataTableColumn label="Shop Info">
+						<h:form>
+							<p:commandButton value="Afficher Info du Shop"
+								icon="fa fa-fw fa-hand-o-right"
+								action="#{shopActionBean.checkShopInfo(shop)}" update="display3"
+								oncomplete="PF('shopApercu').show();" />
+						</h:form>
+					</b:dataTableColumn>
+
+
+					<b:dataTableColumn label="Voir Produits" orderable="false"
+						searchable="false">
+						<h:form>
+							<p:commandButton value="Produits"
+								actionListner="#{shopActionBean.voirProduitsShop(shop)}"
+								update="display4" oncomplete="PF('shopApercuProduits').show();" />
+
+						</h:form>
+					</b:dataTableColumn>
+
+
+
+
+					<b:dataTableColumn label="Editer" orderable="false"
+						searchable="false">
+						<h:form>
+							<p:commandButton value="Editer">
+
+							</p:commandButton>
+						</h:form>
+					</b:dataTableColumn>
+
+					<b:dataTableColumn label="Supprimer" orderable="false"
+						searchable="false">
+						<h:form>
+							<p:commandButton value="Supprimer">
+
+							</p:commandButton>
+						</h:form>
+					</b:dataTableColumn>
+
+
+
+
+
+				</b:dataTable>
+
+			</b:row>
+		</b:panel>
+		<h:form id="FormCreationShop">
+
+			<p:dialog id="editS" header="Création Shop" widgetVar="shopAjout"
+				resizable="false" modal="true" dynamic="true">
+
+				<h:panelGrid id="display" columns="3" cellpadding="5">
+
+					<h:outputLabel for="nom" title="Nom du Shop" value="Nom:"
+						style="color: #336699; font-weight:bold;" />
+					<p:inputText value="#{shopActionBean.newShop.name}" id="nom"
+						label="nom" required="true"
+						requiredMessage="Vous devez saisir un nom de shop" />
+					<p:message id="nomMessage" for="nom" />
+
+					<h:outputLabel for="category" value="Categorie:"
+						title="Categorie Shop"
+						style="color: #336699; font-weight:bold; width:80px !important;" />
+					<p:selectOneMenu id="category"
+						value="#{shopActionBean.newShop.category}"
+						converter="#{categorieConverter}" panelStyle="width:150px"
+						effect="fade" required="true"
+						requiredMessage="Vous devez choisir une catégorie"
+						style="width:350px" filter="true" filterMatchMode="startsWith">
+						<f:selectItem itemLabel="Select One" itemValue="" />
+						<f:selectItems value="#{autoCompleteBean.selectItemCategories}" />
+					</p:selectOneMenu>
+					<p:message id="categoryMessage" for="category" />
+
+					<h:outputLabel for="nomContact" value="Nom Contact:"
+						title="Nom du contact"
+						style="color: #336699; font-weight:bold; width:80px !important;" />
+					<p:inputText id="nomContact"
+						value="#{shopActionBean.newShop.contact.personName}" />
+					<p:message id="nomContactMessage" for="nomContact" />
+
+
+					<h:outputLabel for="prenomContact" value="Prenom Contact:"
+						title="Prenom du contact"
+						style="color: #336699; font-weight:bold; width:80px !important;" />
+					<p:inputText id="prenomContact"
+						value="#{shopActionBean.newShop.contact.personSurname}" />
+					<p:message id="prenomMessage" for="prenomContact" />
+
+					<h:outputLabel for="email" value="Email:" title="Email Shop"
+						style="color: #336699; font-weight:bold; width:80px !important;" />
+					<p:inputText id="email"
+						value="#{shopActionBean.newShop.contact.email}" />
+					<p:message id="emailMessage" for="email" />
+
+					<h:outputLabel for="tel" value="tel:" title="tel Shop"
+						style="color: #336699; font-weight:bold; width:80px !important;" />
+					<p:inputText id="tel"
+						value="#{shopActionBean.newShop.contact.phone}" />
+					<p:message id="telMessage" for="tel" />
+
+
+					<h:outputLabel for="adr" value="Addresse Numéro:"
+						title="Addresse du shop"
+						style="color: #336699; font-weight:bold; width:80px !important;" />
+					<p:inputText id="adr"
+						value="#{shopActionBean.newShop.address.addressNumber}" />
+					<p:message id="adrMessage" for="adr" />
+
+
+					<h:outputLabel for="adr4" value="Ville:" title="Ville du shop"
+						style="color: #336699; font-weight:bold; width:80px !important;" />
+					<p:inputText id="adr4"
+						value="#{shopActionBean.newShop.address.city}" />
+					<p:message id="adr4Message" for="adr4" />
+
+					<h:outputLabel for="wilay" value="Wilaya:" title="Wilaya du shop"
+						style="color: #336699; font-weight:bold; width:80px !important;" />
+					<p:selectOneMenu id="wilay"
+						value="#{shopActionBean.newShop.wilaya}"
+						converter="#{wilayaConverter}" style="width:125px">
+						<f:selectItem itemLabel="Select One" itemValue="" />
+						<f:selectItems value="#{autoCompleteBean.selectItemWilayas}" />
+					</p:selectOneMenu>
+					<p:message id="wilayMessage" for="wilay" />
+
+					<h:outputLabel for="adr5" value="Pays:" title="Pays du shop"
+						style="color: #336699; font-weight:bold; width:80px !important;" />
+					<p:inputText id="adr5"
+						value="#{shopActionBean.newShop.address.country}" />
+					<p:message id="adr5Message" for="adr5" />
+
+				</h:panelGrid>
+
+				<br />
+				<br />
+
+				<f:facet name="footer">
+
+					<p:commandButton value="Enregistrer"
+						update=" panelStore, tableShop "
+						action="#{shopActionBean.ajoutShop}"
+						oncomplete="PF('shopAjout').hide();" />
+
+					<p:commandButton value="Annuler" update="editS"
+						style="float: right;" process="@none"
+						actionListener="#{shopActionBean.reset}" />
+
+				</f:facet>
+
+			</p:dialog>
+
+		</h:form>
+
+
+
+		<h:form id="FormApercuShop" prependId="false">
+
+			<p:dialog header="Info Shop" widgetVar="shopApercu" modal="true">
+
+				<h:panelGrid id="display3" columns="2" cellpadding="4"
+					style="margin:0 auto;">
+
+					<h:outputLabel title="Nom personne a contacter"
+						value="Nom Contact:" style="color: #336699; font-weight:bold;" />
+					<p:inputText readonly="true"
+						value="#{shopActionBean.shopEnCours.contact.personName} #{shopActionBean.shopEnCours.contact.personSurname}" />
+
+					<h:outputLabel title="Email personne a contacter"
+						value="Email Contact:" style="color: #336699; font-weight:bold;" />
+					<p:inputText readonly="true"
+						value="#{shopActionBean.shopEnCours.contact.email}" />
+
+					<h:outputLabel title="Tel personne a contacter"
+						value="Tel Contact:" style="color: #336699; font-weight:bold;" />
+					<p:inputText readonly="true"
+						value="#{shopActionBean.shopEnCours.contact.phone}" />
+
+
+					<h:outputLabel value="Addresse Contact:" title="Addresse du shop"
+						style="color: #336699; font-weight:bold; width:250px !important;" />
+					<p:inputTextarea readonly="true"
+						value="#{shopActionBean.shopEnCours.address.addressNumber}
+					#{shopActionBean.shopEnCours.address.city} #{shopActionBean.shopEnCours.address.country} " />
+
+                    
+				</h:panelGrid>
+
+			</p:dialog>
+		</h:form>
+
+		<h:form id="FormApercuShopProducts" prependId="false">
+
+			<p:dialog  header="Produits du shop" id="display4"
+				widgetVar="shopApercuProduits">
+              <div id="products">
+				<ui:repeat value="#{shopActionBean.listShopProducts}" var="item">
+
+					
+					<div class="main_box">
+						
+						<div class="top">
+							<div class="left"></div>
+						</div>
+						<div class="content">
+							<div class="title">
+								<a href="#">#{item.name}</a>
+							</div>
+							<div class="price">
+								<a href="#">
+								<p:graphicImage id="imageProfil" value="#{profilsImages.image}"
+									style=" width:80px; height:80px; border:1px solid #ffd954; margin-bottom:5px; float:left; "
+									cache="false" rendered="true">
+									<f:param name="itemId"
+										value="#{item.id}" />
+								</p:graphicImage>
+								</a>
+								<div class="number">#{item.price} #{messages['currency']}
+								</div>
+								
+							</div>
+							<div class="break">#{item.shortDescription}</div>
+						</div>
+						<div class="bottom">
+							<div class="right">
+								<div class="left"></div>
+							</div>
+						</div>
+					</div>
+				</ui:repeat>
+				<div class="cleaner"></div>
+			</div>
+
+
+			</p:dialog>
+		</h:form>
+
+
+
+
+
+	</ui:define>
+
+
+
+</ui:composition>

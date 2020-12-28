@@ -1,0 +1,100 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:ui="http://java.sun.com/jsf/facelets"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:p="http://primefaces.org/ui"
+    xmlns:f="http://java.sun.com/jsf/core">
+
+ <h:head>
+    
+    <link rel="stylesheet" type="text/css" media="screen" href="#{request.contextPath}/css/TemplatePrincipale.css" />
+    <link href='http://fonts.googleapis.com/css?family=Condiment' rel='stylesheet' type='text/css' />
+    <link href='http://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'/>
+    <script src="js/jquery-1.7.min.js"></script>
+    <script src="js/jquery.easing.1.3.js"></script>
+    <script src="js/tms-0.4.x.js"></script>
+    <script>
+		$(document).ready(function(){				   	
+			$('.slider')._TMS({
+				show:0,
+				pauseOnHover:true,
+				prevBu:false,
+				nextBu:false,
+				playBu:false,
+				duration:1000,
+				preset:'fade',
+				pagination:true,
+				pagNums:false,
+				slideshow:7000,
+				numStatus:true,
+				banners:'fromRight',
+				waitBannerAnimation:false,
+				progressBar:false
+			});		
+		});
+    </script>
+  
+</h:head>
+<h:body >
+ <div class="main">
+  <!--==============================header=================================-->
+   
+    <ui:insert name="header" >
+       <div id="header">
+        <h1><a href="index.html"><img src="images/logo.jpeg" alt=""/></a></h1>
+	  <div class="clear"></div> 
+	  </div>
+	</ui:insert> 
+	
+	<ui:insert name="nav" >	
+		<div id="navigation">
+         
+         <div class="clear"></div>       
+        </div>
+     </ui:insert>
+   
+  
+  <!--==============================content================================-->
+    <ui:insert name="content" >	
+        <div id="slide" class="box-shadow">		
+            <div class="slider">
+                <ul class="items">
+                    <li><img src="images/image1.jpeg" alt="" /><div class="banner"></div></li>
+                    <li><img src="images/image2.jpeg" alt="" /><div class="banner"></div></li>
+                    <li><img src="images/image3.jpeg" alt="" /><div class="banner"></div></li>
+                    <li><img src="images/image4.jpeg" alt="" /><div class="banner"></div></li>
+                    <li><img src="images/image5.jpeg" alt="" /><div class="banner"></div></li>
+                </ul>
+            </div>	
+        </div>
+ 
+        <div class="container_12">
+          <div class="grid_12">
+            <div class="pad-0 border-1">
+                <h2 class="top-1 p0">Toward a new manner to use affordable technologies and social networks to improve business for women in emerging countries </h2>
+                <p class="p2">
+                    C’est une plateforme Algéro-Tunisien qui consiste à trouver le moyen et la manière idéal 
+                    pour mettre à la disposition des femmes artisanes l’ensemble des nouvelles technologies pour
+                    faciliter leur processus du travail : l’achat de la matière première chez les fournisseurs, 
+                    les processus de fabrication des divers produits ainsi que la vente de leurs produits. 
+                </p>
+            </div>
+          </div>
+          <div class="clear"></div>
+        </div>
+      
+   </ui:insert> 
+  </div>    
+<!--==============================footer=================================-->
+    <ui:insert name="footer" >	
+        <div class="footer-menu">
+                        <h2 class="footer-wid-title">Contactez-nous</h2>
+                        <ul>
+                            <li><p>  Adresse: 5,Rue des Trois Frères Aissou, Ben-Aknoun-BP 143.16030-Alger   </p></li>
+                            <li><p>Tél/Fax:(021)912186 </p></li>
+                            <li> <p>website:<a href="http://dsism.cerist.dz">http://dsism.cerist.dz</a></p></li>
+                        </ul>                        
+        </div>
+    </ui:insert>	   
+</h:body>
+</html>
